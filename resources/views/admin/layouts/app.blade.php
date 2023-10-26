@@ -121,6 +121,14 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="{{ route('customer.index') }}" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
+              <p>
+                Customer
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="{{ route('invoice.index') }}" class="nav-link">
               <i class="nav-icon fas fa-file-alt"></i>
               <p>
