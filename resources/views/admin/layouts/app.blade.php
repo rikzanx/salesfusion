@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ config('app.name', 'Laravel') }}</title>
+  
+  <link rel="icon" href="{{ asset(config('app.icon', 'Laravel'))  }}" type="image/x-icon">
   <link rel="apple-touch-icon" href="{{ asset(config('app.icon', 'Laravel')) }}">
   <link rel="shortcut icon" type="image/x-icon" href="{{ asset(config('app.icon', 'Laravel')) }}">
 

@@ -94,8 +94,6 @@ class CompanyController extends Controller
         }
         $company = Company::findOrFail($id);
         config(['app.name' => $request->name]);
-        $configPath = base_path('config/app.php');
-        file_put_contents($configPath, '<?php return ' . var_export(config('app'), true) . ';');
         $company->name = $request->name;
         $company->about = $request->about;
         $company->address = $request->address;
@@ -103,7 +101,7 @@ class CompanyController extends Controller
         $company->email = $request->email;
         $company->lat = $request->lat;
         $company->lng = $request->lng;
-
+        
         if($request->hasFile('image_company')){
             $uploadFolder = "img/";
             $image = $request->file('image_company');
@@ -111,7 +109,10 @@ class CompanyController extends Controller
             $image->move(public_path($uploadFolder), $imageName);
             $image_link = $uploadFolder.$imageName;
             $company->image_company = $image_link;
+            config(['app.icon' => $image_link]);
         }
+        $configPath = base_path('config/app.php');
+        file_put_contents($configPath, '<?php return ' . var_export(config('app'), true) . ';');
         if($company->save()){
             return redirect("admin/perusahaan")->with('status', "Sukses merubah perusahaan");
         }else {

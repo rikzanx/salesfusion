@@ -3,8 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="apple-touch-icon" href="{{ asset($company->image_company) }}">
+
+  <link rel="icon" href="{{ asset($company->image_company) }}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{{ asset($company->image_company) }}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset($company->image_company) }}">
+
+
   <title>{{ config('app.name', 'Laravel') }} | Log in</title>
 
   <!-- Google Font: Source Sans Pro -->
