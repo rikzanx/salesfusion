@@ -35,25 +35,21 @@
               <form method="POST" action="{{ route('invoice.store') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="card-body">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Tanggal</label>
-                  <input type="date" name="duedate" class="form-control" id="exampleInputEmail1" value="{{ \Carbon\Carbon::now()->format("Y-m-d") }}">
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Tanggal Pengiriman</label>
-                  <input type="date" name="tanggal_pengiriman" class="form-control" id="exampleInputEmail1" value="{{ \Carbon\Carbon::now()->format("Y-m-d") }}">
-                </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Nama Customer</label>
-                    <input type="text" name="name_customer" class="form-control" id="exampleInputEmail1" placeholder="Masukkan nama customer">
+                    <label for="exampleInputEmail1">Tanggal</label>
+                    <input type="date" name="duedate" class="form-control" id="exampleInputEmail1" value="{{ \Carbon\Carbon::now()->format("Y-m-d") }}">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Address Customer</label>
-                    <input type="text" name="address_customer" class="form-control" id="exampleInputEmail1" placeholder="Masukkan nama customer">
+                    <label for="exampleInputEmail1">Tanggal Pengiriman</label>
+                    <input type="date" name="tanggal_pengiriman" class="form-control" id="exampleInputEmail1" value="{{ \Carbon\Carbon::now()->format("Y-m-d") }}">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Phone Customer</label>
-                    <input type="text" name="phone_customer" class="form-control" id="exampleInputEmail1" placeholder="Masukkan nama customer">
+                    <label>Customer</label>
+                    <select class="form-control" name="id_customer">
+                      @foreach ($customers as $item)
+                        <option value="{{ $item->id }}">{{ $item->name_customer }}</option>
+                      @endforeach
+                    </select>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Catatan tambahan</label>

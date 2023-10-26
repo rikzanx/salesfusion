@@ -45,6 +45,14 @@
                     <input type="date" name="tanggal_pengiriman" class="form-control" id="exampleInputEmail1" value="{{ \Carbon\Carbon::parse($invoice->tanggal_pengiriman)->format("Y-m-d") }}">
                   </div>
                   <div class="form-group">
+                    <label>Customer</label>
+                    <select class="form-control" name="category_id">
+                      @foreach ($customers as $item)
+                        <option value="{{ $item->id }}" {{ ($item->id == $invoice->id_customer)?'selected':'' }}>{{ $item->name }}</option>
+                      @endforeach
+                    </select>
+                  </div>
+                  <div class="form-group">
                     <label for="exampleInputEmail1">Nama Customer</label>
                     <input type="text" value="{{ $invoice->name_customer }}" name="name_customer" class="form-control" id="exampleInputEmail1" placeholder="Masukkan nama customer">
                   </div>

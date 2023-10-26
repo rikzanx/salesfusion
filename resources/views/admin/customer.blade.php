@@ -8,12 +8,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>{{ config('app.name', 'Laravel') }} - Invoice</h1>
+            <h1>{{ config('app.name', 'Laravel') }} - Customer</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Produk</li>
+              <li class="breadcrumb-item active">Customer</li>
             </ol>
           </div>
         </div>
@@ -27,7 +27,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <a href="{{ route('invoice.create') }}" class="btn btn-success"><span class="fas fa-plus"></span> tambah invoice</a>
+                <a href="{{ route('customer.create') }}" class="btn btn-success"><span class="fas fa-plus"></span> Tambah Customer</a>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -35,28 +35,22 @@
                   <thead>
                   <tr>
                     <th>No</th>
-                    <th>No Invoice</th>
-                    <th>Name Customer</th>
-                    <th>Tanggal</th>
-                    <th>Total</th>
+                    <th>Nama</th>
+                    <th>Alamat</th>
+                    <th>Telp</th>
                     <th>Aksi</th>
                   </tr>
                   </thead>
                   <tbody>
-                    @foreach ($invoices as $item)
+                    @foreach ($customers as $item)
                     <tr>
                         <td>{{ $loop->index+1 }}</td>
-                        <td>{{ $item->no_invoice }}</td>
-                        <td>{{ $item->customer->name_customer }}</td>
-                        <td>{{ $item->duedate }}</td>
-                        <td>@rupiah($item->total - ($item->diskon_rate) + ($item->tax_rate*$item->total/100))</td>
+                        <td>{{ $item->name_customer }}</td>
+                        <td>{{ $item->address_customer }}</td>
+                        <td>{{ $item->phone_customer }}</td>
                         <td>
-                            <a class="btn btn-success" href="{{ route('invoice.show',$item->id) }}" target="_blank"><span class="fas fa-eye"></span></a>
-                            <a class="btn btn-warning" href="{{ route('surat_jalan',$item->id) }}" target="_blank"><span class="fas fa-eye"></span></a>
-                            <a class="btn btn-primary" href="{{ route('invoice.edit',$item->id) }}"><span class="fas fa-edit"></span></a>
+                            <a class="btn btn-primary" href="{{ route('customer.edit',$item->id) }}"><span class="fas fa-edit"></span></a>
                             <button class="btn btn-danger" onclick="modaldelete({{ $item->id }})"><span class="fas fa-trash"></span></button>
-                            {{-- <a class="btn btn-primary" href="{{ route('produk.edit',$item->id) }}"><span class="fas fa-edit"></span></a>
-                            <button class="btn btn-danger" onclick="modaldelete({{ $item->id }})"><span class="fas fa-trash"></span></button> --}}
                         </td>
                     </tr>
                     @endforeach
@@ -64,12 +58,10 @@
                   <tfoot>
                     <tr>
                       <th>No</th>
-                    <th>No Invoice</th>
-                    <th>Name Customer</th>
-                    <th>Tanggal</th>
-                    <th>Total</th>
-
-                    <th>Aksi</th>
+                      <th>Nama</th>
+                      <th>Alamat</th>
+                      <th>Telp</th>
+                      <th>Aksi</th>
                     </tr>
                   </tfoot>
                 </table>
@@ -100,7 +92,7 @@
         <div class="modal-body">
           <p>Apakah anda yakin akan menghapus data ini&hellip;</p>
         </div>
-        <form action="{{ route('invoice.destroy', ':id') }}" method="POST" class="delete-form">
+        <form action="{{ route('customer.destroy', ':id') }}" method="POST" class="delete-form">
             @csrf
             @method('DELETE')
             <div class="modal-footer justify-content-between">

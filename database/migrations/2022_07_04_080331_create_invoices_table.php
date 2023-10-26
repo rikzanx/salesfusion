@@ -18,10 +18,7 @@ class CreateInvoicesTable extends Migration
             $table->integer("id_inv")->nullable();
             $table->string("no_invoice");
             $table->date("duedate")->nullable();
-            $table->string("id_customer")->nullable();
-            $table->string("name_customer")->nullable();
-            $table->string("address_customer")->nullable();
-            $table->string("phone_customer")->nullable();
+            $table->integer("id_customer");
             $table->string("comment")->nullable();
             $table->decimal("diskon_rate",10,2)->default(0);
             $table->decimal("tax_rate",10,2)->default(0);

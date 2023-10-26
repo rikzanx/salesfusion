@@ -65,9 +65,9 @@
           <p class="text-end">
 	    
             <strong>Kepada</strong><br>
-            {{  $invoice->name_customer}}<br>
-            {{  $invoice->address_customer}}<br>
-            {{  $invoice->phone_customer}}
+            {{  $invoice->customer->name_customer}}<br>
+            {{  $invoice->customer->address_customer}}<br>
+            {{  $invoice->customer->phone_customer}}
           </p>
         </div>
       </div>

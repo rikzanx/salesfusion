@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ImagesProductController;
 use App\Http\Controllers\ImagesSliderController;
@@ -62,6 +63,7 @@ Route::group(['prefix' => 'admin'],function(){
     Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
     Route::get('/',[AdminPageController::class, 'index'])->name('admin.dashboard');
     Route::resource('kategori', CategoryController::class);
+    Route::resource('customer', CustomerController::class);
     Route::resource('perusahaan',CompanyController::class);
     Route::resource('slider',ImagesSliderController::class);
     Route::resource('produk',ProductController::class);

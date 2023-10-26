@@ -61,9 +61,9 @@
     			<div class="col-xs-6 text-right">
     				<address>
         			<strong>Kepada:</strong><br>
-    					{{  $invoice->name_customer}}<br>
-              {{  $invoice->address_customer}}<br>
-              {{  $invoice->phone_customer}}
+    					{{  $invoice->customer->name_customer}}<br>
+              {{  $invoice->customer->address_customer}}<br>
+              {{  $invoice->customer->phone_customer}}
     				</address>
     			</div>
     		</div>
