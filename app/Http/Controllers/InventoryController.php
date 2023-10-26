@@ -46,7 +46,6 @@ class InventoryController extends Controller
             $inventory->name = $request->name;
             $inventory->description = $request->description;
             $inventory->lokasi = $request->lokasi;
-            $inventory->qty = $request->qty;
             $inventory->save();
 
             DB::commit();
@@ -73,7 +72,6 @@ class InventoryController extends Controller
             'name' => 'required|string|max:255',
             'description' => 'required',
             'lokasi' => 'required',
-            'qty' => 'required|numeric',
         ]);
 
         if ($validator->fails()) {
@@ -86,7 +84,7 @@ class InventoryController extends Controller
             $inventory->name = $request->name;
             $inventory->description = $request->description;
             $inventory->lokasi = $request->lokasi;
-            $inventory->qty = $request->qty;
+            
             $inventory->save();
 
             DB::commit();
