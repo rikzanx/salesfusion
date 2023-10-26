@@ -61,35 +61,35 @@ class ProductSeeder extends Seeder
         // seeder untuk foto produk
         \App\Models\ImagesProduct::create([
             'product_id' => 1,
-            'image_product' => "img/img-product.svg",
+            'image_product' => "img/img-product-new.jpeg",
         ]);
         \App\Models\ImagesProduct::create([
             'product_id' => 1,
-            'image_product' => "img/img-product.svg",
+            'image_product' => "img/img-product-new.jpeg",
         ]);
         \App\Models\ImagesProduct::create([
             'product_id' => 1,
-            'image_product' => "img/img-product.svg",
+            'image_product' => "img/img-product-new.jpeg",
         ]);
         \App\Models\ImagesProduct::create([
             'product_id' => 1,
-            'image_product' => "img/img-product.svg",
+            'image_product' => "img/img-product-new.jpeg",
         ]);
         \App\Models\ImagesProduct::create([
             'product_id' => 2,
-            'image_product' => "img/img-product.svg",
+            'image_product' => "img/img-product-new.jpeg",
         ]);
         \App\Models\ImagesProduct::create([
             'product_id' => 2,
-            'image_product' => "img/img-product.svg",
+            'image_product' => "img/img-product-new.jpeg",
         ]);
         \App\Models\ImagesProduct::create([
             'product_id' => 3,
-            'image_product' => "img/img-product.svg",
+            'image_product' => "img/img-product-new.jpeg",
         ]);
         \App\Models\ImagesProduct::create([
             'product_id' => 4,
-            'image_product' => "img/img-product.svg",
+            'image_product' => "img/img-product-new.jpeg",
         ]);
     }
 }

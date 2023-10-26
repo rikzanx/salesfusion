@@ -14,13 +14,13 @@ class ImagesSliderSeeder extends Seeder
     public function run()
     {
         \App\Models\ImagesSlider::create([
-            'image_slider' => "img/img-slider.svg",
+            'image_slider' => "img/img-slider-new.jpg",
         ]);
         \App\Models\ImagesSlider::create([
-            'image_slider' => "img/img-slider.svg",
+            'image_slider' => "img/img-slider-new.jpg",
         ]);
         \App\Models\ImagesSlider::create([
-            'image_slider' => "img/img-slider.svg",
+            'image_slider' => "img/img-slider-new.jpg",
         ]);
     }
 }
