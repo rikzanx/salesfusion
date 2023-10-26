@@ -1,5 +1,5 @@
 <?php return array (
-  'name' => 'SalesFusion',
+  'name' => 'UD Harapan Baru',
   'icon' => 'img/img-company.svg',
   'log' => 'errorlog',
   'env' => 'local',
@@ -85,14 +85,14 @@
   ),
   'company' => 
   array (
-    'name' => 'SalesFusion',
+    'name' => 'UD Harapan Baru',
     'about' => 'SalesFusion is a comprehensive application that combines sales management, inventory management, as well as ERP and CRM solutions to help companies efficiently manage their operations.',
-    'address' => '123 Main Street, Anytown, USA',
-    'telp' => '+1234567890',
-    'email' => 'info@salesfusion.com',
-    'image_company' => 'img/img-company.svg',
-    'lat' => '40.7128',
-    'lng' => '-74.0060',
-    'saldo' => 0,
+    'address' => 'Kampung Seng no 77, Simokerto, Surabaya',
+    'telp' => '+6285101440330',
+    'email' => 'udharapan.teknik@gmail.com',
+    'image_company' => 'img/1698312222-IMG_1461.png',
+    'lat' => '-7.2367432',
+    'lng' => '112.7486677',
+    'saldo' => '0',
   ),
 );
