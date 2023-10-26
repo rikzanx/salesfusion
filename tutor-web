@@ -5,9 +5,9 @@ cara install baru
 4. lakukan composer install
 5. copy index.php .htaccess
 6. lakukan php artisan migrate
-7. sesuaikan data terutama data companies,data prod
-8. setting app_url app_name di env dan juga app_image
-9.
+7. lakukan seeder default php artisan db:seed --class=NamaSeeder
+8. sesuaikan data terutama data companies,data prod
+9. setting app_url app_name di env dan juga app_image
 
 
 cara backup databse 

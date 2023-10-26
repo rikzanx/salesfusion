@@ -13,35 +13,83 @@ class ProductSeeder extends Seeder
      */
     public function run()
     {
+        // Seeder untuk Kategori Produk
+        \App\Models\Category::create([
+            'name' => "Category 1",
+            'image_category' => "img/img-category-1.svg",
+        ]);
+
+        \App\Models\Category::create([
+            'name' => "Category 2",
+            'image_category' => "img/img-category-2.svg",
+        ]);
+
+        \App\Models\Category::create([
+            'name' => "Category 3",
+            'image_category' => "img/img-category-3.svg",
+        ]);
+
+        // Seeder untuk Produk
         \App\Models\Product::create([
             'category_id' => 1,
-            'name' => "Gate Valve",
-            'material' => "Cast Iron,Carbon Steel, Steinless Steel",
-            'size' => "2,3,4,5,6,8,10",
-            'rating' => "jis 10k, jis 20k, jis 30k, ansi 150, ansi 300, ansi 600",
-            'connection' => "flange-end, screw",
-            'brand' => "Kitz, GLT, Toyo dll.",
-            'description' => "Gate Valve",
+            'name' => "Product 1",
+            'brand' => "Brand A",
+            'description' => "This is Product 1 from Category 1.",
         ]);
+
+        \App\Models\Product::create([
+            'category_id' => 1,
+            'name' => "Product 2",
+            'brand' => "Brand B",
+            'description' => "This is Product 2 from Category 1.",
+        ]);
+
         \App\Models\Product::create([
             'category_id' => 2,
-            'name' => "Globe Valve",
-            'material' => "Cast Iron,Carbon Steel, Steinless Steel",
-            'size' => "2,3,4,5,6,8,10",
-            'rating' => "jis 10k, jis 20k, jis 30k, ansi 150, ansi 300, ansi 600",
-            'connection' => "flange-end, screw",
-            'brand' => "Kitz, GLT, Toyo dll.",
-            'description' => "Globe Valve",
+            'name' => "Product 3",
+            'brand' => "Brand X",
+            'description' => "This is Product 3 from Category 2.",
         ]);
+
         \App\Models\Product::create([
             'category_id' => 3,
-            'name' => "Ball Valve",
-            'material' => "Cast Iron,Carbon Steel, Steinless Steel",
-            'size' => "2,3,4,5,6,8,10",
-            'rating' => "jis 10k, jis 20k, jis 30k, ansi 150, ansi 300, ansi 600",
-            'connection' => "flange-end, screw",
-            'brand' => "Kitz, GLT, Toyo dll.",
-            'description' => "Ball Valve",
+            'name' => "Product 4",
+            'brand' => "Brand Z",
+            'description' => "This is Product 4 from Category 3.",
+        ]);
+
+        // seeder untuk foto produk
+        \App\Models\ImagesProduct::create([
+            'product_id' => 1,
+            'image_product' => "img/img-product.svg",
+        ]);
+        \App\Models\ImagesProduct::create([
+            'product_id' => 1,
+            'image_product' => "img/img-product.svg",
+        ]);
+        \App\Models\ImagesProduct::create([
+            'product_id' => 1,
+            'image_product' => "img/img-product.svg",
+        ]);
+        \App\Models\ImagesProduct::create([
+            'product_id' => 1,
+            'image_product' => "img/img-product.svg",
+        ]);
+        \App\Models\ImagesProduct::create([
+            'product_id' => 2,
+            'image_product' => "img/img-product.svg",
+        ]);
+        \App\Models\ImagesProduct::create([
+            'product_id' => 2,
+            'image_product' => "img/img-product.svg",
+        ]);
+        \App\Models\ImagesProduct::create([
+            'product_id' => 3,
+            'image_product' => "img/img-product.svg",
+        ]);
+        \App\Models\ImagesProduct::create([
+            'product_id' => 4,
+            'image_product' => "img/img-product.svg",
         ]);
     }
 }

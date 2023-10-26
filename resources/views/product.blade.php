@@ -118,7 +118,6 @@ https://templatemo.com/tm-559-zay-shop
                             <div class="card-body">
                                 <a href="{{ route('product-detail',[$product->slug]) }}" class="h3 text-decoration-none"><b>{{ $product->name }}</b></a>
                                 <ul class="w-100 list-unstyled mb-0">
-                                    <li>Size: {{ $product->size }}</li>
                                     <li>Brand: {{ $product->brand }}</li>
                                     <li class="" style="color:gray;">Dilihat {{ $product->dilihat }} kali</li>
                                 </ul>

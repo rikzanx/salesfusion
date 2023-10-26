@@ -18,12 +18,11 @@ class CreateProductsTable extends Migration
             $table->integer("category_id");
             $table->string("name");
             $table->string('slug')->unique();
-            $table->string("material");
-            $table->string("size");
-            $table->string("rating");
-            $table->string("connection");
             $table->string("brand");
-            $table->string("description");
+            $table->text("description");
+            $table->integer('dilihat')->default(0);
+            $table->decimal("price", 10, 2)->default(0); // Menambahkan harga produk
+            $table->integer("stock")->default(0); // Menambahkan jumlah stok produk
             $table->timestamps();
         });
     }

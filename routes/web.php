@@ -11,8 +11,6 @@ use App\Http\Controllers\AdminPageController;
 use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\ItemController;
-use App\Http\Controllers\DeletedInvoiceController;
-use App\Http\Controllers\DeletedItemController;
 use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\PenawaranController;
 use App\Http\Controllers\SuratPenawaranController;
@@ -69,8 +67,6 @@ Route::group(['prefix' => 'admin'],function(){
     Route::resource('produk',ProductController::class);
     Route::resource('invoice',InvoiceController::class);
     Route::resource('item',ItemController::class);
-    Route::resource('deletedinvoice',DeletedInvoiceController::class);
-    Route::resource('deleteditem',DeletedItemController::class);
     Route::resource('password',PasswordController::class);
     Route::resource('penawaran',PenawaranController::class);
     Route::resource('surat-penawaran',SuratPenawaranController::class);

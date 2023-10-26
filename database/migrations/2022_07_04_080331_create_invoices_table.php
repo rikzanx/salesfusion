@@ -23,10 +23,12 @@ class CreateInvoicesTable extends Migration
             $table->string("address_customer")->nullable();
             $table->string("phone_customer")->nullable();
             $table->string("comment")->nullable();
-            $table->integer("diskon_rate")->default(0);
-            $table->integer("tax_rate")->default(0);
-            $table->integer("profit")->default(0);
+            $table->decimal("diskon_rate",10,2)->default(0);
+            $table->decimal("tax_rate",10,2)->default(0);
+            $table->decimal("profit",10,2)->default(0);
             $table->timestamps();
+            $table->date("tanggal_pengiriman")->nullable();
+            $table->decimal('dp',10,2)->default(0);
         });
     }
 

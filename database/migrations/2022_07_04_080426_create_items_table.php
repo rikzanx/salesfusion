@@ -19,7 +19,7 @@ class CreateItemsTable extends Migration
             $table->string("item_of");
             $table->string("description");
             $table->integer("qty");
-            $table->integer("item_price");
+            $table->decimal("item_price",10,2)->default(0);
             $table->date("duedate")->nullable();
             $table->timestamps();
         });

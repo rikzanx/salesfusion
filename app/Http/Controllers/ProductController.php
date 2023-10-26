@@ -53,10 +53,6 @@ class ProductController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
             'category_id' => 'required',
-            'material' => 'required',
-            'size' => 'required',
-            'rating' => 'required',
-            'connection' => 'required',
             'brand' => 'required',
             'description' => 'required',
             'filenames' => 'required',
@@ -73,10 +69,6 @@ class ProductController extends Controller
             $product= new Product();
             $product->category_id = $request->category_id;
             $product->name = $request->name;
-            $product->material = $request->material;
-            $product->size = $request->size;
-            $product->rating = $request->rating;
-            $product->connection = $request->connection;
             $product->brand = $request->brand;
             $product->description = $request->description;
             $product->save();
@@ -144,10 +136,6 @@ class ProductController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
             'category_id' => 'required',
-            'material' => 'required',
-            'size' => 'required',
-            'rating' => 'required',
-            'connection' => 'required',
             'brand' => 'required',
             'description' => 'required',
         ]);
@@ -162,10 +150,6 @@ class ProductController extends Controller
             $product= Product::findOrFail($id);
             $product->category_id = $request->category_id;
             $product->name = $request->name;
-            $product->material = $request->material;
-            $product->size = $request->size;
-            $product->rating = $request->rating;
-            $product->connection = $request->connection;
             $product->brand = $request->brand;
             $product->description = $request->description;
             $product->save();

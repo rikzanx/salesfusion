@@ -15,9 +15,9 @@ class CreateKeuangansTable extends Migration
     {
         Schema::create('keuangans', function (Blueprint $table) {
             $table->id();
-            $table->integer('amount')->default(0);
+            $table->decimal('amount',10,2)->default(0);
             $table->string('tipe');
-            $table->integer('balance_after');
+            $table->decimal('balance_after',10,2)->default(0);
             $table->string('description')->nullable();
             $table->timestamps();
         });

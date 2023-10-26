@@ -16,13 +16,11 @@ class Product extends Model
         "category_id",
         "name",
         "slug",
-        "material",
-        "size",
-        "rating",
-        "connection",
         "brand",
         "description",
-        "dilihat"
+        "dilihat",
+        "price",
+        "stock"
     ];
 
     public function sluggable(): array

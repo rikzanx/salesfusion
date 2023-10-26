@@ -24,6 +24,7 @@ class CreateCompaniesTable extends Migration
             $table->double('lat')->nullable()->default(0);
             $table->double('lng')->nullable()->default(0);
             $table->timestamps();
+            $table->integer('saldo')->default(0);
         });
     }
 
