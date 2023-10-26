@@ -41,7 +41,7 @@
                   </div>
                   <div class="form-group">
                     <label>Tipe Keuangan</label>
-                    <select class="form-control" name="tipe">
+                    <select class="form-control" name="tipe" id="tipeSelect">
                       <option value="pemasukan">pemasukan</option>
                       <option value="pengeluaran">pengeluaran</option>
                     </select>
@@ -83,6 +83,7 @@
     $("body").on("click",".btn-danger",function(){ 
         $(this).parents(".hdtuto").remove();
     });
+    $('#tipeSelect').select2();
   });
 </script>
 @endsection

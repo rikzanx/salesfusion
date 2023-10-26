@@ -44,7 +44,7 @@
                     <input type="date" name="tanggal_pengiriman" class="form-control" id="exampleInputEmail1" value="{{ \Carbon\Carbon::now()->format("Y-m-d") }}">
                   </div>
                   <div class="form-group">
-                    <label>Customer</label>
+                    <label>Customer <a href="{{ route('customer.create') }}" class="btn btn-sm btn-primary">Tambah Customer</a></label>
                     <select class="form-control" name="id_customer" id="customerSelect">
                       @foreach ($customers as $item)
                         <option value="{{ $item->id }}">{{ $item->name_customer }} - {{ $item->address_customer }}</option>

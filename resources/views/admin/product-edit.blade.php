@@ -41,8 +41,8 @@
                     <input type="text" name="name" class="form-control" id="exampleInputEmail1" placeholder="Masukkan nama: Gate valve" value="{{ $product->name }}">
                   </div>
                   <div class="form-group">
-                    <label>Kategori Produk</label>
-                    <select class="form-control" name="category_id">
+                    <label>Kategori Produk <a href="{{ route('kategori.create') }}" class="btn btn-sm btn-primary">Tambah Kategori</a></label>
+                    <select class="form-control" name="category_id" id="categorySelect">
                       @foreach ($categories as $item)
                         <option value="{{ $item->id }}" {{ ($item->id == $product->category_id)?'selected':'' }}>{{ $item->name }}</option>
                       @endforeach
@@ -122,6 +122,7 @@
     $("body").on("click",".btn-danger",function(){ 
         $(this).parents(".hdtuto").remove();
     });
+    $('#categorySelect').select2();
   });
 </script>
 @endsection
