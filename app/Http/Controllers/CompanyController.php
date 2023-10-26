@@ -93,7 +93,6 @@ class CompanyController extends Controller
             return redirect()->route("kategori.index")->with('danger', $validator->errors()->first());
         }
         $company = Company::findOrFail($id);
-        config(['app.name' => $request->name]);
         $company->name = $request->name;
         $company->about = $request->about;
         $company->address = $request->address;
@@ -101,7 +100,17 @@ class CompanyController extends Controller
         $company->email = $request->email;
         $company->lat = $request->lat;
         $company->lng = $request->lng;
-        
+        $data = Array(
+            'name' => $request->name,
+            'about' => $request->about,
+            'address' => $request->address,
+            'telp' => $request->telp,
+            'email' => $request->email,
+            'image_company' => $company->image_company,
+            'lat' => $request->lat,
+            'lng' => $request->lng,
+            'saldo' => $company->saldo,
+        );
         if($request->hasFile('image_company')){
             $uploadFolder = "img/";
             $image = $request->file('image_company');
@@ -109,8 +118,10 @@ class CompanyController extends Controller
             $image->move(public_path($uploadFolder), $imageName);
             $image_link = $uploadFolder.$imageName;
             $company->image_company = $image_link;
-            config(['app.icon' => $image_link]);
+            $data["image_company"] = $image_link;
         }
+        config(['app.name' => $request->name]);
+        config(['app.company' => $data ]);
         $configPath = base_path('config/app.php');
         file_put_contents($configPath, '<?php return ' . var_export(config('app'), true) . ';');
         if($company->save()){
