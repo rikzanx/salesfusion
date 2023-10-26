@@ -24,5 +24,9 @@ class CompanySeeder extends Seeder
             'lng' => "-74.0060",
             'saldo' => 0
         ]);
+        config(['app.name' => "SalesFusion",]);
+        config(['app.icon' => "img/img-company.svg"]);
+        $configPath = base_path('config/app.php');
+        file_put_contents($configPath, '<?php return ' . var_export(config('app'), true) . ';');
     }
 }
