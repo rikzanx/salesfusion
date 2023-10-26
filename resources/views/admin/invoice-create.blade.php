@@ -62,14 +62,16 @@
                   </div>
                   <div class="input-group hdtuto control-group lst increment" >
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-12 col-sm-3">
                           <input type="text" name="description[]" placeholder="Nama Barang" class="myfrm form-control">
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-sm-3">
                           <input type="number" name="qty[]" placeholder="Jumlah" class="myfrm form-control">
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-sm-3">
                           <input type="number" name="item_price[]" placeholder="Harga Barang" min="1000" class="myfrm form-control">
+                        </div>
+                        <div class="col-12 col-sm-2">
                           <div class="input-group-btn"> 
                             <button class="btn btn-success btn-add-image" type="button"><i class="fldemo glyphicon glyphicon-plus"></i>Add</button>
                           </div>
@@ -79,14 +81,16 @@
                   <div class="clone hide">
                     <div class="hdtuto control-group lst input-group" style="margin-top:10px">
                       <div class="row">
-                        <div class="col-4">
+                        <div class="col-12 col-sm-3">
                           <input type="text" name="description[]" placeholder="Nama Barang" class="myfrm form-control">
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-sm-3">
                           <input type="number" name="qty[]" placeholder="Jumlah" class="myfrm form-control">
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-sm-3">
                           <input type="number" name="item_price[]" placeholder="Harga Barang" min="1000" class="myfrm form-control">
+                        </div>
+                        <div class="col-12 col-sm-2">
                           <div class="input-group-btn"> 
                             <button class="btn btn-danger" type="button"><i class="fldemo glyphicon glyphicon-remove"></i> Remove</button>
                           </div>
@@ -138,22 +142,40 @@
   $(document).ready(function() {
     $(".btn-add-image").click(function(){ 
         var lsthmtl = `
-          <div class="hdtuto control-group lst input-group" style="margin-top:10px">
-            <div class="row">
-              <div class="col-4">
-                <input type="text" name="description[]" placeholder="Nama Barang" class="myfrm form-control">
+        <div class="hdtuto control-group lst input-group" style="margin-top:10px">
+          <div class="row">
+            <div class="col-12 col-sm-3">
+              <input type="text" name="description[]" placeholder="Nama Barang" class="myfrm form-control">
+            </div>
+            <div class="col-12 col-sm-3">
+              <input type="number" name="qty[]" placeholder="Jumlah" class="myfrm form-control">
+            </div>
+            <div class="col-12 col-sm-3">
+              <input type="number" name="item_price[]" placeholder="Harga Barang" min="1000" class="myfrm form-control">
+            </div>
+            <div class="col-12 col-sm-2">
+              <div class="input-group-btn"> 
+                <button class="btn btn-danger" type="button"><i class="fldemo glyphicon glyphicon-remove"></i> Remove</button>
               </div>
-              <div class="col-4">
-                <input type="number" name="qty[]" placeholder="Jumlah" class="myfrm form-control">
+            </div>
+          </div>  
+        </div>          <div class="row">
+            <div class="col-12 col-sm-3">
+              <input type="text" name="description[]" placeholder="Nama Barang" class="myfrm form-control">
+            </div>
+            <div class="col-12 col-sm-3">
+              <input type="number" name="qty[]" placeholder="Jumlah" class="myfrm form-control">
+            </div>
+            <div class="col-12 col-sm-3">
+              <input type="number" name="item_price[]" placeholder="Harga Barang" min="1000" class="myfrm form-control">
+            </div>
+            <div class="col-12 col-sm-2">
+              <div class="input-group-btn"> 
+                <button class="btn btn-danger" type="button"><i class="fldemo glyphicon glyphicon-remove"></i> Remove</button>
               </div>
-              <div class="col-4">
-                <input type="number" name="item_price[]" placeholder="Harga Barang" min="1000" class="myfrm form-control">
-                <div class="input-group-btn"> 
-                  <button class="btn btn-danger" type="button"><i class="fldemo glyphicon glyphicon-remove"></i> Remove</button>
-                </div>
-              </div>
-            </div>  
-          </div>
+            </div>
+          </div>  
+        </div>
         `;
         $(".increment").after(lsthmtl);
     });
