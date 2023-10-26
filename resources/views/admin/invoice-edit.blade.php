@@ -46,7 +46,7 @@
                   </div>
                   <div class="form-group">
                     <label>Customer <a href="{{ route('customer.create') }}" class="btn btn-sm btn-primary">Tambah Customer</a></label>
-                    <select class="form-control" name="category_id" id="customerSelect">
+                    <select class="form-control" name="id_customer" id="customerSelect">
                       @foreach ($customers as $item)
                         <option value="{{ $item->id }}" {{ ($item->id == $invoice->id_customer)?'selected':'' }}>{{ $item->name_customer }} - {{ $item->address_customer }} </option>
                       @endforeach
