@@ -46,9 +46,9 @@
                   </div>
                   <div class="form-group">
                     <label>Customer</label>
-                    <select class="form-control" name="category_id">
+                    <select class="form-control" name="category_id" id="customerSelect">
                       @foreach ($customers as $item)
-                        <option value="{{ $item->id }}" {{ ($item->id == $invoice->id_customer)?'selected':'' }}>{{ $item->name_customer }}</option>
+                        <option value="{{ $item->id }}" {{ ($item->id == $invoice->id_customer)?'selected':'' }}>{{ $item->name_customer }} - {{ $item->address_customer }} </option>
                       @endforeach
                     </select>
                   </div>
@@ -152,6 +152,10 @@
     $("body").on("click",".btn-danger",function(){ 
         $(this).parents(".hdtuto").remove();
     });
+
+    $('#customerSelect').select2(); // Anda perlu memasang plugin Select2 untuk ini
+
+
   });
 </script>
 @endsection
