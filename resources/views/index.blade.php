@@ -239,7 +239,7 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="row pt-2">
                     <div class="col-12">
                         <p class="text-left text-light">
-                            Copyright &copy; 2021 {{ config('app.company.name', 'SalesFusion') }}
+                            Copyright &copy; {{ date('Y') }} {{ config('app.company.name', 'SalesFusion') }}
                         </p>
                     </div>
                 </div>
