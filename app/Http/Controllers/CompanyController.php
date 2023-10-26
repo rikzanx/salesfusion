@@ -93,6 +93,9 @@ class CompanyController extends Controller
             return redirect()->route("kategori.index")->with('danger', $validator->errors()->first());
         }
         $company = Company::findOrFail($id);
+        config(['app.name' => $request->name]);
+        $configPath = base_path('config/app.php');
+        file_put_contents($configPath, '<?php return ' . var_export(config('app'), true) . ';');
         $company->name = $request->name;
         $company->about = $request->about;
         $company->address = $request->address;
