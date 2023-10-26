@@ -1,0 +1,31 @@
+/*
+Custom Css
+*/
+
+.nav-link.active{
+    color: #106bc7 !important;
+    font-weight: bold !important;
+}
+.nav-link:hover{
+    color: #106bc7 !important;
+    font-weight: bold !important;
+}
+.float-ok{
+	position:fixed !important;
+	width:60px !important;
+	height:60px !important;
+	bottom:40px !important;
+	right:40px !important;
+	background-color:#25d366 !important;
+	color:#FFF !important;
+	border-radius:50px !important;
+	text-align:center !important;
+  font-size:30px !important;
+	box-shadow: 2px 2px 3px #999 !important;
+  z-index:100 !important;
+}
+
+.my-float-ok{
+    z-index:104 !important;
+	margin-top:16px !important;
+}
