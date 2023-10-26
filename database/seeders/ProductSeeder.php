@@ -16,17 +16,17 @@ class ProductSeeder extends Seeder
         // Seeder untuk Kategori Produk
         \App\Models\Category::create([
             'name' => "Category 1",
-            'image_category' => "img/img-category-1.svg",
+            'image_category' => "img/img-category.svg",
         ]);
 
         \App\Models\Category::create([
             'name' => "Category 2",
-            'image_category' => "img/img-category-2.svg",
+            'image_category' => "img/img-category.svg",
         ]);
 
         \App\Models\Category::create([
             'name' => "Category 3",
-            'image_category' => "img/img-category-3.svg",
+            'image_category' => "img/img-category.svg",
         ]);
 
         // Seeder untuk Produk
