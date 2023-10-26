@@ -53,7 +53,7 @@
               <div>
                 <img src="{{ asset($company->image_company) }}" class="logo">
               </div>
-    				<strong>{{ $company->name }}</strong><br>
+    				<strong>{{ config('app.company.name', 'SalesFusion') }}</strong><br>
             {{$company->address}}<br>
             Email : {{ $company->email}}
     				</address>

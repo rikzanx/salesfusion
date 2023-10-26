@@ -53,7 +53,7 @@
             </div>
             <div class="col-9">
               <p>
-                <strong>{{ $company->name }}</strong><br>
+                <strong>{{ config('app.company.name', 'SalesFusion') }}</strong><br>
                 {{$company->address}}<br>
                 Phone : {{ $company->telp}}
               </p>
@@ -143,7 +143,7 @@
           <br>
           <br>
           <br>
-          <b>{{ $company->name }}</b>
+          <b>{{ config('app.company.name', 'SalesFusion') }}</b>
         </div>
       </div>
       

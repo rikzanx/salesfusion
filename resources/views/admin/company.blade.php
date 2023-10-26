@@ -38,7 +38,7 @@
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Nama Perusahaan</label>
-                    <input type="text" name="name" value="{{ $company->name }}" class="form-control" id="exampleInputEmail1" placeholder="Masukkan nama: Gate valve">
+                    <input type="text" name="name" value="{{ config('app.company.name', 'SalesFusion') }}" class="form-control" id="exampleInputEmail1" placeholder="Masukkan nama: Gate valve">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputFile">Logo Perusahaan</label>

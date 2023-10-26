@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Tentang kami - {{ $company->name }}</title>
+    <title>Tentang kami - {{ config('app.company.name', 'SalesFusion') }}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -36,7 +36,7 @@ https://templatemo.com/tm-559-zay-shop
                     <i class="fa fa-envelope mx-2"></i>
                     <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:{{ $company->email }}">{{ $company->email }}</a>
                     <i class="fa fa-phone mx-2"></i>
-                    <a class="navbar-sm-brand text-light text-decoration-none" href="https://api.whatsapp.com/send/?phone={{ $company->telp }}&text=Halo%20{{ $company->name }}">{{ $company->telp }}</a>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="https://api.whatsapp.com/send/?phone={{ $company->telp }}&text=Halo%20{{ config('app.company.name', 'SalesFusion') }}">{{ $company->telp }}</a>
                 </div>
             </div>
         </div>
@@ -48,7 +48,7 @@ https://templatemo.com/tm-559-zay-shop
     <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
             <a class="navbar-brand text-success logo h3 align-self-center" href="{{ route('index') }}">
-                {{ $company->name }}
+                {{ config('app.company.name', 'SalesFusion') }}
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -158,7 +158,7 @@ https://templatemo.com/tm-559-zay-shop
             <div class="row">
 
                 <div class="col-md-4 pt-5">
-                    <h2 class="h2 text-success border-bottom pb-3 border-light logo">{{ $company->name }}</h2>
+                    <h2 class="h2 text-success border-bottom pb-3 border-light logo">{{ config('app.company.name', 'SalesFusion') }}</h2>
                     <ul class="list-unstyled text-light footer-link-list">
                         <li>
                             <i class="fas fa-map-marker-alt fa-fw"></i>
@@ -166,7 +166,7 @@ https://templatemo.com/tm-559-zay-shop
                         </li>
                         <li>
                             <i class="fa fa-phone fa-fw"></i>
-                            <a class="text-decoration-none" href="https://api.whatsapp.com/send/?phone={{ $company->telp }}&text=Halo%20{{ $company->name }}">{{ $company->telp }}</a>
+                            <a class="text-decoration-none" href="https://api.whatsapp.com/send/?phone={{ $company->telp }}&text=Halo%20{{ config('app.company.name', 'SalesFusion') }}">{{ $company->telp }}</a>
                         </li>
                         <li>
                             <i class="fa fa-envelope fa-fw"></i>
@@ -231,7 +231,7 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="row pt-2">
                     <div class="col-12">
                         <p class="text-left text-light">
-                            Copyright &copy; 2021 {{ $company->name }}
+                            Copyright &copy; 2021 {{ config('app.company.name', 'SalesFusion') }}
                         </p>
                     </div>
                 </div>
@@ -241,7 +241,7 @@ https://templatemo.com/tm-559-zay-shop
     </footer>
     <!-- End Footer -->
 
-    <a href="https://api.whatsapp.com/send/?phone={{ $company->telp }}&text=Halo%20{{ $company->name }}" class="float-ok" target="_blank">
+    <a href="https://api.whatsapp.com/send/?phone={{ $company->telp }}&text=Halo%20{{ config('app.company.name', 'SalesFusion') }}" class="float-ok" target="_blank">
         <i class="fa fa-whatsapp my-float-ok"></i>
         </a>
     
