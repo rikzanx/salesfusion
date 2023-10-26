@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ config('app.name', 'Laravel') }}</title>
   
-  <link rel="icon" href="{{ asset(config('app.icon', 'Laravel'))  }}" type="image/x-icon">
-  <link rel="apple-touch-icon" href="{{ asset(config('app.icon', 'Laravel')) }}">
-  <link rel="shortcut icon" type="image/x-icon" href="{{ asset(config('app.icon', 'Laravel')) }}">
+  <link rel="icon" href="{{ asset(config('app.company.image_company', 'img/img-company.svg')) }}" type="image/x-icon">
+  <link rel="apple-touch-icon" href="{{ asset(config('app.company.image_company', 'img/img-company.svg')) }}" type="image/x-icon">
+  <link rel="shortcut icon" href="{{ asset(config('app.company.image_company', 'img/img-company.svg')) }}" type="image/x-icon">
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
