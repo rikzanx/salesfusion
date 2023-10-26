@@ -48,7 +48,7 @@
                     <label>Customer</label>
                     <select class="form-control" name="category_id">
                       @foreach ($customers as $item)
-                        <option value="{{ $item->id }}" {{ ($item->id == $invoice->id_customer)?'selected':'' }}>{{ $item->name }}</option>
+                        <option value="{{ $item->id }}" {{ ($item->id == $invoice->id_customer)?'selected':'' }}>{{ $item->name_customer }}</option>
                       @endforeach
                     </select>
                   </div>
