@@ -24,7 +24,6 @@ class KeuanganController extends Controller
         $sumPemasukan = Keuangan::where('tipe', 'pemasukan')->sum('amount');
         $sumPengeluaran = Keuangan::where('tipe','!=','pemasukan')->sum('amount');
         // dd($sumPengeluaran);
-        $company = Company::firstOrFail();
         $saldo = $sumPemasukan-$sumPengeluaran;
         return view('admin.keuangan',[
             'keuangan' => $keuangan,
@@ -88,117 +87,14 @@ class KeuanganController extends Controller
         }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    // public function show($id)
-    // {
-    //     $invoice = Invoice::with('items')->where('id',$id)->firstOrFail();
-    //     $company = Company::first();
-    //     // dd($invoice);
-    //     return view('admin.invoice-show',[
-    //         'invoice' => $invoice,
-    //     'date_inv' => Carbon::createFromFormat('Y-m-d', $invoice->duedate)->format('Y-m-d'),
-    //         'company' => $company,
-    //     ]);
-    // }
-
-    // public function show_proform($id)
-    // {
-    //     $invoice = Invoice::with('items')->where('id',$id)->firstOrFail();
-    //     $company = Company::first();
-    //     // dd($invoice);
-    //     return view('admin.invoice-show-proform',[
-    //         'invoice' => $invoice,
-    //     'date_inv' => Carbon::createFromFormat('Y-m-d', $invoice->duedate)->addDays(7)->format('Y-m-d'),
-    //         'company' => $company,
-    //     ]);
-    // }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    // public function edit($id)
-    // {
-    //     $invoice = Invoice::with('items')->where('id',$id)->firstOrFail();
-    //     return view('admin.invoice-edit',[
-    //         "invoice" => $invoice
-    //     ]);
-    // }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    // public function update(Request $request, $id)
-    // {
-    //     $validator = Validator::make($request->all(), [
-    //         'name_customer' => 'required|string|max:255',
-    //         'address_customer' => 'required',
-    //         'phone_customer' => 'required',
-    //         'description' => 'required',
-    //         'qty' => 'required',
-    //         'item_price' => 'required',
-    //         'diskon_rate' => 'required',
-    //         'tax_rate' => 'required',
-    //         'profit' => 'required'
-    //     ]);
+    
+   
+    
+   
+    
         
-    //     if ($validator->fails()) {
-    //         return redirect()->route("invoice.index")->with('danger', $validator->errors()->first());
-    //     }
-    //     // dd($request->comment);
-
-    //     // foreach($invoices as $a){
-    //     //     Item::where('invoice_id', $a->id)
-    //     //     ->update([
-    //     //         'duedate' => $a->duedate
-    //     //         ]);
-    //     // }
-    //     DB::beginTransaction();
-    //     try {
-    //         $invoice = Invoice::findOrFail($id);
-    //         $invoice->name_customer = $request->name_customer;
-    //         $invoice->duedate = $request->duedate;
-    //         $invoice->address_customer = $request->address_customer;
-    //         $invoice->phone_customer = $request->phone_customer;
-    //         $invoice->diskon_rate = $request->diskon_rate;
-    //         $invoice->tax_rate = $request->tax_rate;
-    //         $invoice->profit = $request->profit;
-    //         if($request->has('comment')){
-    //             $invoice->comment = $request->comment;
-    //         }
-    //         $invoice->save();
-    //         $delete = Item::where('invoice_id',$id)->delete();
-    //         for($i=0;$i<count($request->description);$i++){
-    //             $item = new Item();
-    //             $item->duedate = $request->duedate;
-    //             $item->invoice_id = $invoice->id;
-    //             $item->item_of = "pcs";
-    //             $item->description = $request->description[$i];
-    //             $item->qty = $request->qty[$i];
-    //             $item->item_price = $request->item_price[$i];
-    //             $item->save();
-    //         }
-    //         DB::commit();
-    //         return redirect()->route("invoice.index")->with('status', "Sukses merubah invoice");
-    //     } catch (\Exception $e) {
-    //         DB::rollback();
-    //         dd($e);
-    //         $ea = "Terjadi Kesalahan saat merubah invoice".$e->message;
-    //         return redirect()->route("invoice.index")->with('danger', $ea);
-    //     }
-    // }
-
+    
+    
     /**
      * Remove the specified resource from storage.
      *

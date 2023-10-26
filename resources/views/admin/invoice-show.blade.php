@@ -1,5 +1,5 @@
 <head>
-  <title>Invoice {{$invoice->no_invoice}} {{$company->name}}</title>
+  <title>Invoice {{$invoice->no_invoice}} {{ config('app.company.name', "SalesFusion") }}</title>
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <style>
         body {
@@ -54,11 +54,11 @@
         <hr>
       <div class="row">
         <div class="col-6">
-          <img src="{{ asset($company->image_company) }}" class="logo">
+          <img src="{{ asset(config('app.company.image_company', 'img/img-company.svg')) }}" class="logo">
           <p>
             <strong>{{ config('app.company.name', 'SalesFusion') }}</strong><br>
-            {{$company->address}}<br>
-            Phone : {{ $company->telp}}
+            {{ config('app.company.address', "123 Main Street, Anytown, USA") }}<br>
+            Phone : {{ config('app.company.telp', "+6285101440330") }}
           </p>
         </div>
         <div class="col-6">
@@ -154,7 +154,7 @@
           <br>
           <br>
           <br>
-          <b>{{$company->name}}</b>
+          <b>{{ config('app.company.name', "SalesFusion") }}</b>
         </div>
       </div>
       

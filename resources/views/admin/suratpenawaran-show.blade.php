@@ -1,5 +1,5 @@
 <head>
-  <title>Surat Penawaran {{$company->name}} {{$suratpenawaran->no_surat}}</title>
+  <title>Surat Penawaran {{ config('app.company.name', "SalesFusion") }} {{$suratpenawaran->no_surat}}</title>
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <style>
         body {
@@ -49,13 +49,13 @@
         <div class="col-8">
           <div class="row">
             <div class="col-3">
-              <img src="{{ asset($company->image_company) }}" class="logo">
+              <img src="{{ asset(config('app.company.image_company', 'img/img-company.svg')) }}" class="logo">
             </div>
             <div class="col-9">
               <p>
                 <strong>{{ config('app.company.name', 'SalesFusion') }}</strong><br>
-                {{$company->address}}<br>
-                Phone : {{ $company->telp}}
+                {{ config('app.company.address', "123 Main Street, Anytown, USA") }}<br>
+                Phone : {{ config('app.company.telp', "+6285101440330") }}
               </p>
             </div>
           </div>
@@ -86,7 +86,7 @@
       <br>
       <div class="row">
         <div class="col-md-12">
-            <p>Kami dari {{$company->name}} bermaksud memberikan penawaran harga barang dibawah ini:</p>
+            <p>Kami dari {{ config('app.company.name', "SalesFusion") }} bermaksud memberikan penawaran harga barang dibawah ini:</p>
               <table class="table table-bordered my-0">
                 <thead>
                   <tr>

@@ -20,7 +20,6 @@ class PasswordController extends Controller
      */
     public function index()
     {
-        // $company = Company::first();
         // return view('admin.password');
         $user = User::first();
         return view('admin.password',[

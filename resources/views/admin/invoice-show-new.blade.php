@@ -51,11 +51,11 @@
     			<div class="col-xs-6">
     				<address>
               <div>
-                <img src="{{ asset($company->image_company) }}" class="logo">
+                <img src="{{ asset(config('app.company.image_company', 'img/img-company.svg')) }}" class="logo">
               </div>
     				<strong>{{ config('app.company.name', 'SalesFusion') }}</strong><br>
-            {{$company->address}}<br>
-            Email : {{ $company->email}}
+            {{ config('app.company.address', "123 Main Street, Anytown, USA") }}<br>
+            Email : {{ config('app.company.email', "info@salesfusion.com") }}
     				</address>
     			</div>
     			<div class="col-xs-6 text-right">

@@ -6,9 +6,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="icon" href="{{ asset($company->image_company) }}" type="image/x-icon">
-    <link rel="apple-touch-icon" href="{{ asset($company->image_company) }}">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset($company->image_company) }}">
+    <link rel="icon" href="{{ asset(config('app.company.image_company', 'img/img-company.svg')) }}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{{ asset(config('app.company.image_company', 'img/img-company.svg')) }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset(config('app.company.image_company', 'img/img-company.svg')) }}">
 
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/templatemo.css') }}">
@@ -34,9 +34,9 @@ https://templatemo.com/tm-559-zay-shop
             <div class="w-100 d-flex justify-content-between">
                 <div>
                     <i class="fa fa-envelope mx-2"></i>
-                    <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:{{ $company->email }}">{{ $company->email }}</a>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:{{ config('app.company.email', 'info@salesfusion.com') }}">{{ config('app.company.email', 'info@salesfusion.com') }}</a>
                     <i class="fa fa-phone mx-2"></i>
-                    <a class="navbar-sm-brand text-light text-decoration-none" href="https://api.whatsapp.com/send/?phone={{ $company->telp }}&text=Halo%20{{ config('app.company.name', 'SalesFusion') }}">{{ $company->telp }}</a>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="https://api.whatsapp.com/send/?phone={{ config('app.company.telp', '+6285101440330') }}&text=Halo%20{{ config('app.company.name', 'SalesFusion') }}">{{ config('app.company.telp', '+6285101440330') }}</a>
                 </div>
             </div>
         </div>
@@ -100,11 +100,11 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="col-md-8 text-white">
                     <h1>Tentang Kami</h1>
                     <p>
-                        {{ $company->about }}
+                        {{ config('app.company.about', "SalesFusion is a comprehensive application that combines sales management, inventory management, as well as ERP and CRM solutions to help companies efficiently manage their operations.") }}
                     </p>
                 </div>
                 <div class="col-md-4">
-                <img src="{{ asset($company->image_company) }}" class="img-fluid" alt="About Hero">
+                <img src="{{ asset(config('app.company.image_company', 'img/img-company.svg')) }}" class="img-fluid" alt="About Hero">
                 </div>
             </div>
         </div>
@@ -162,15 +162,15 @@ https://templatemo.com/tm-559-zay-shop
                     <ul class="list-unstyled text-light footer-link-list">
                         <li>
                             <i class="fas fa-map-marker-alt fa-fw"></i>
-                            {{ $company->address }}
+                            {{ config('app.company.address', "123 Main Street, Anytown, USA") }}
                         </li>
                         <li>
                             <i class="fa fa-phone fa-fw"></i>
-                            <a class="text-decoration-none" href="https://api.whatsapp.com/send/?phone={{ $company->telp }}&text=Halo%20{{ config('app.company.name', 'SalesFusion') }}">{{ $company->telp }}</a>
+                            <a class="text-decoration-none" href="https://api.whatsapp.com/send/?phone={{ config('app.company.telp', '+6285101440330') }}&text=Halo%20{{ config('app.company.name', 'SalesFusion') }}">{{ config('app.company.telp', '+6285101440330') }}</a>
                         </li>
                         <li>
                             <i class="fa fa-envelope fa-fw"></i>
-                            <a class="text-decoration-none" href="mailto:{{ $company->email }}">{{ $company->email }}</a>
+                            <a class="text-decoration-none" href="mailto:{{ config('app.company.email', 'info@salesfusion.com') }}">{{ config('app.company.email', 'info@salesfusion.com') }}</a>
                         </li>
                     </ul>
                 </div>
@@ -241,7 +241,7 @@ https://templatemo.com/tm-559-zay-shop
     </footer>
     <!-- End Footer -->
 
-    <a href="https://api.whatsapp.com/send/?phone={{ $company->telp }}&text=Halo%20{{ config('app.company.name', 'SalesFusion') }}" class="float-ok" target="_blank">
+    <a href="https://api.whatsapp.com/send/?phone={{ config('app.company.telp', '+6285101440330') }}&text=Halo%20{{ config('app.company.name', 'SalesFusion') }}" class="float-ok" target="_blank">
         <i class="fa fa-whatsapp my-float-ok"></i>
         </a>
     

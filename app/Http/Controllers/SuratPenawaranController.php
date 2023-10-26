@@ -109,12 +109,10 @@ class SuratPenawaranController extends Controller
     public function show($id)
     {
         $suratpenawaran = SuratPenawaran::with('items')->where('id',$id)->firstOrFail();
-        $company = Company::first();
         // dd($suratpenawaran);
         return view('admin.suratpenawaran-show',[
             'suratpenawaran' => $suratpenawaran,
         'date_inv' => Carbon::createFromFormat('Y-m-d', $suratpenawaran->duedate)->format('Y-m-d'),
-            'company' => $company,
         ]);
     }
 

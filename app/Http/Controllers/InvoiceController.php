@@ -124,37 +124,31 @@ class InvoiceController extends Controller
     public function show($id)
     {
         $invoice = Invoice::with('items','customer')->where('id',$id)->firstOrFail();
-        $company = Company::first();
         // dd($invoice);
         return view('admin.invoice-show',[
             'invoice' => $invoice,
             'date_inv' => Carbon::createFromFormat('Y-m-d', $invoice->duedate)->format('Y-m-d'),
-            'company' => $company,
         ]);
     }
 
     public function surat_jalan($id)
     {
         $invoice = Invoice::with('items','customer')->where('id',$id)->firstOrFail();
-        $company = Company::first();
         // dd($invoice);
         return view('admin.surat-jalan',[
             'invoice' => $invoice,
         'date_inv' => Carbon::createFromFormat('Y-m-d', $invoice->duedate)->format('Y-m-d'),
         'tanggal_pengiriman' => Carbon::createFromFormat('Y-m-d', $invoice->tanggal_pengiriman)->format('Y-m-d'),
-            'company' => $company,
         ]);
     }
 
     public function show_proform($id)
     {
         $invoice = Invoice::with('items','customer')->where('id',$id)->firstOrFail();
-        $company = Company::first();
         // dd($invoice);
         return view('admin.invoice-show-proform',[
             'invoice' => $invoice,
         'date_inv' => Carbon::createFromFormat('Y-m-d', $invoice->duedate)->addDays(7)->format('Y-m-d'),
-            'company' => $company,
         ]);
     }
 
