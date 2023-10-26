@@ -33,7 +33,6 @@ class InventoryController extends Controller
             'name' => 'required|string|max:255',
             'description' => 'required',
             'lokasi' => 'required',
-            'qty' => 'required|numeric',
         ]);
 
         if ($validator->fails()) {

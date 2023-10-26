@@ -45,10 +45,6 @@
             <input type="text" value="{{ $inventory->name }}" name="name" class="form-control" id="exampleInputEmail1" placeholder="Enter the name">
         </div>
         <div class="form-group">
-            <label for="exampleInputEmail1">Qty</label>
-            <input type="number" value="{{ $inventory->qty }}" name="qty" class="form-control" id="exampleInputEmail1" placeholder="Enter the quantity">
-        </div>
-        <div class="form-group">
             <label for="exampleInputEmail1">Description</label>
             <input type="text" value="{{ $inventory->description }}" name="description" class="form-control" id="exampleInputEmail1" placeholder="Enter the description">
         </div>
