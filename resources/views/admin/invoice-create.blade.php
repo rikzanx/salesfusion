@@ -45,7 +45,7 @@
                   </div>
                   <div class="form-group">
                     <label>Customer</label>
-                    <select class="form-control" name="id_customer">
+                    <select class="form-control" name="id_customer" id="customerSelect">
                       @foreach ($customers as $item)
                         <option value="{{ $item->id }}">{{ $item->name_customer }}</option>
                       @endforeach
@@ -134,6 +134,8 @@
     $("body").on("click",".btn-danger",function(){ 
         $(this).parents(".hdtuto").remove();
     });
+
+    $('#customerSelect').select2(); // Anda perlu memasang plugin Select2 untuk ini
   });
 </script>
 @endsection
