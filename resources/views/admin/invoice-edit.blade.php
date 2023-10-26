@@ -53,18 +53,6 @@
                     </select>
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Nama Customer</label>
-                    <input type="text" value="{{ $invoice->name_customer }}" name="name_customer" class="form-control" id="exampleInputEmail1" placeholder="Masukkan nama customer">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Address Customer</label>
-                    <input type="text" value="{{ $invoice->address_customer }}" name="address_customer" class="form-control" id="exampleInputEmail1" placeholder="Masukkan nama customer">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Phone Customer</label>
-                    <input type="text" value="{{ $invoice->phone_customer }}" name="phone_customer" class="form-control" id="exampleInputEmail1" placeholder="Masukkan nama customer">
-                  </div>
-                  <div class="form-group">
                     <label for="exampleInputEmail1">Catatan tambahan</label>
                     <textarea class="form-control" name="comment" id="" cols="30" rows="10" >{{$invoice->comment}}</textarea>
                     {{-- <input type="text" value="{{ $invoice->comment }}" name="comment" class="form-control" id="exampleInputEmail1" placeholder="Masukkan nama customer"> --}}
