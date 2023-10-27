@@ -59,7 +59,7 @@
                   </div>
                   
                   <div class="form-group">
-                    <label for="exampleInputFile">Items</label> <a href="{{ route('inventory.create') }}" class="">Tambah Barang</a></label>
+                    <label for="exampleInputFile">Items</label> <a href="{{ route('inventories.create') }}" class="">Tambah Barang</a></label>
                   </div>
                   <div class="input-group control-group lst increment" >
                   @foreach($invoice->items as $item)

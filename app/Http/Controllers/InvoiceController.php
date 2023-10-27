@@ -7,6 +7,7 @@ use App\Models\Invoice;
 use App\Models\Item;
 use App\Models\Company;
 use App\Models\Customer;
+use App\Models\Inventory;
 use Validator;
 use session;
 use Illuminate\Support\Facades\DB;
@@ -42,8 +43,10 @@ class InvoiceController extends Controller
     public function create()
     {
         $customers = Customer::get();
+        $inventories = Inventory::get();
         return view('admin.invoice-create',[
-            "customers" => $customers
+            "customers" => $customers,
+            "inventories" => $inventories
         ]);
     }
 
@@ -95,12 +98,12 @@ class InvoiceController extends Controller
                 $invoice->comment = $request->comment;
             }
             $invoice->save();
-            for($i=0;$i<count($request->description);$i++){
+            for($i=0;$i<count($request->inventory_id);$i++){
                 $item = new Item();
                 $item->duedate = $request->duedate;
                 $item->invoice_id = $invoice->id;
                 $item->item_of = "pcs";
-                $item->description = $request->description[$i];
+                $item->inventory_id = $request->inventory_id[$i];
                 $item->qty = $request->qty[$i];
                 $item->item_price = $request->item_price[$i];
                 $item->save();
@@ -125,6 +128,7 @@ class InvoiceController extends Controller
     {
         $invoice = Invoice::with('items','customer')->where('id',$id)->firstOrFail();
         // dd($invoice);
+
         return view('admin.invoice-show',[
             'invoice' => $invoice,
             'date_inv' => Carbon::createFromFormat('Y-m-d', $invoice->duedate)->format('Y-m-d'),
@@ -161,10 +165,12 @@ class InvoiceController extends Controller
     public function edit($id)
     {
         $customers = Customer::get();
+        $inventories = Inventory::get();
         $invoice = Invoice::with('items','customer')->where('id',$id)->firstOrFail();
         return view('admin.invoice-edit',[
             "invoice" => $invoice,
-            "customers" => $customers
+            "customers" => $customers,
+            "inventories" => $inventories
         ]);
     }
 
@@ -214,12 +220,12 @@ class InvoiceController extends Controller
             }
             $invoice->save();
             $delete = Item::where('invoice_id',$id)->delete();
-            for($i=0;$i<count($request->description);$i++){
+            for($i=0;$i<count($request->inventory_id);$i++){
                 $item = new Item();
                 $item->duedate = $request->duedate;
                 $item->invoice_id = $invoice->id;
                 $item->item_of = "pcs";
-                $item->description = $request->description[$i];
+                $item->inventory_id = $request->inventory_id[$i];
                 $item->qty = $request->qty[$i];
                 $item->item_price = $request->item_price[$i];
                 $item->save();

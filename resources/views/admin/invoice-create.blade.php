@@ -58,7 +58,7 @@
                   </div>
                   
                   <div class="form-group">
-                    <label for="exampleInputFile">Items</label> <a href="{{ route('inventory.create') }}" class="">Tambah Item</a></label>
+                    <label for="exampleInputFile">Items</label> <a href="{{ route('inventories.create') }}" class="">Tambah Item</a></label>
                   </div>
                   <div class="input-group hdtuto control-group lst increment" >
                     <div class="row">
