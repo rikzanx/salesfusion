@@ -101,7 +101,7 @@
                     <div class="hdtuto control-group lst input-group" style="margin-top:10px">
                       <input type="file" name="filenames[]" class="myfrm form-control">
                       <div class="input-group-btn"> 
-                        <button class="btn btn-danger" type="button"><i class="fldemo glyphicon glyphicon-remove"></i> Remove</button>
+                        <button class="btn btn-danger btn-hapus-input" type="button"><i class="fldemo glyphicon glyphicon-remove"></i> Remove</button>
                       </div>
                     </div>
                   </div>
@@ -166,7 +166,7 @@
         var lsthmtl = $(".clone").html();
         $(".increment").after(lsthmtl);
     });
-    $("body").on("click",".btn-danger",function(){ 
+    $("body").on("click",".btn-hapus-input",function(){ 
         $(this).parents(".hdtuto").remove();
     });
     $('#categorySelect').select2();
