@@ -102,9 +102,9 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('inventorytransaction.index') }}" class="nav-link">
-              <i class="nav-icon fas fa-database"></i>
+              <i class="nav-icon fas fa-exchange-alt"></i>
               <p>
-                Inventory Transaksi Barang
+                Inventory Transaksi
               </p>
             </a>
           </li>
