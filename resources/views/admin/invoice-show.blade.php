@@ -2,7 +2,7 @@
   <title>Invoice {{$invoice->no_invoice}} {{ config('app.company.name', "SalesFusion") }}</title>
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <style>
-        body {
+    body {
       background: #ccc;
       padding: 30px;
     }
@@ -38,6 +38,13 @@
     hr{
       border-top: 1px solid black !important;
     }
+    /* CSS untuk sel-sel tabel dengan teks yang harus tetap satu baris */
+    .table td, .table th {
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important; /* Jika teks terlalu panjang, akan terpotong dan ditampilkan dengan elipsis (...) */
+    }
+
     </style>
 </head>
 <div class="container">
