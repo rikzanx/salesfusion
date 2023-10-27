@@ -74,6 +74,12 @@
                   </div>
 
                   <div class="form-group">
+                    @foreach($product->images as $item)
+                    <img src="{{ asset($item->image_product) }}" alt="">
+                    @endforeach
+                  </div>
+
+                  <div class="form-group">
                     <label for="exampleInputFile">Upload/Ganti Foto Produk Baru</label>
                   </div>
                   <div class="input-group hdtuto control-group lst increment" >
