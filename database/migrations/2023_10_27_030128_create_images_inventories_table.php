@@ -15,6 +15,8 @@ class CreateImagesInventoriesTable extends Migration
     {
         Schema::create('images_inventories', function (Blueprint $table) {
             $table->id();
+            $table->integer("inventory_id");
+            $table->string("image_inventory");
             $table->timestamps();
         });
     }

@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\ImagesInventory;
+use Validator;
+use session;
+use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class ImagesInventoryController extends Controller
 {
@@ -79,6 +84,16 @@ class ImagesInventoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::beginTransaction();
+        try{
+            ImagesInventory::destroy($id);
+            DB::commit();
+            return redirect()->route("inventory.index")->with('status', "Sukses menghapus gambar product");
+        }catch(\Exception $e){
+            DB::rollback();
+            dd($e);
+            $ea = "Terjadi Kesalahan saat menghapus gambar product".$e->message;
+            return redirect()->route("inventory.index")->with('danger', $ea);
+        }
     }
 }

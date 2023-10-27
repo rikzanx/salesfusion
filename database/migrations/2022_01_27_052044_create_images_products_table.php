@@ -18,7 +18,6 @@ class CreateImagesProductsTable extends Migration
             $table->integer("product_id");
             $table->string("image_product");
             $table->timestamps();
-            $table->integer('dilihat')->default(0);
         });
     }
 
