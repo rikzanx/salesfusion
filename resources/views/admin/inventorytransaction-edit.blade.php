@@ -91,7 +91,7 @@
     $("body").on("click",".btn-danger",function(){ 
         $(this).parents(".hdtuto").remove();
     });
-    $('#categorySelect').select2();
+    $('#inventorySelect').select2();
   });
 </script>
 @endsection
