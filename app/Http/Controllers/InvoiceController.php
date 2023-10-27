@@ -135,6 +135,17 @@ class InvoiceController extends Controller
         ]);
     }
 
+    public function newinvoice($id)
+    {
+        $invoice = Invoice::with('items','customer')->where('id',$id)->firstOrFail();
+        // dd($invoice);
+
+        return view('admin.newinvoice',[
+            'invoice' => $invoice,
+            'date_inv' => Carbon::createFromFormat('Y-m-d', $invoice->duedate)->format('Y-m-d'),
+        ]);
+    }
+
     public function surat_jalan($id)
     {
         $invoice = Invoice::with('items','customer')->where('id',$id)->firstOrFail();
