@@ -11,6 +11,7 @@ class Item extends Model
     protected $primaryKey = 'id';
     protected $fillable = [
         "invoice_id",
+        "inventory_id",
         "item_of",
         "description",
         "qty",
@@ -18,13 +19,18 @@ class Item extends Model
         "duedate"
     ];
     
-    public function invoice(){
+    public function invoice()
+    {
         return $this->hasOne('App\Models\Invoice','id','invoice_id');
+    }
+
+    public function inventory()
+    {
+        return $this->hasOne('App\Models\Inventory','id','inventory_id')
     }
     
     public function getTotalAttribute()
     {
-
         return $this->qty * $this->item_price;
 
     }

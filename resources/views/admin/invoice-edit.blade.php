@@ -59,7 +59,7 @@
                   </div>
                   
                   <div class="form-group">
-                    <label for="exampleInputFile">Items</label>
+                    <label for="exampleInputFile">Items</label> <a href="{{ route('inventory.create') }}" class="">Tambah Barang</a></label>
                   </div>
                   <div class="input-group control-group lst increment" >
                   @foreach($invoice->items as $item)
@@ -67,7 +67,11 @@
                       <div class="hdtuto control-group lst input-group" style="margin-top:10px">
                         <div class="row">
                             <div class="col-12 col-sm-4">
-                            <input value="{{ $item->description }}" type="text" name="description[]" placeholder="Nama Barang" class="myfrm form-control">
+                              <select class="form-control" name="inventory_id[]" class="inventorySelect">
+                                @foreach ($inventories as $inv)
+                                  <option value="{{ $inv->id }}" {{ ($inv->id == $item->inventory_id)?'selected':'' }}>{{ $inv->sku }} - {{ $inv->name }} </option>
+                                @endforeach
+                              </select>
                             </div>
                             <div class="col-12 col-sm-4">
                             <input value="{{ $item->item_price }}" type="number" name="item_price[]" placeholder="Harga Barang" min="1000" class="myfrm form-control">
@@ -90,7 +94,11 @@
                       <div class="hdtuto control-group lst input-group" style="margin-top:10px">
                         <div class="row">
                           <div class="col-12 col-sm-4">
-                            <input value="{{ $item->description }}" type="text" name="description[]" placeholder="Nama Barang" class="myfrm form-control">
+                            <select class="form-control" name="inventory_id[]" class="inventorySelect">
+                              @foreach ($inventories as $inv)
+                                <option value="{{ $inv->id }}" {{ ($inv->id == $item->inventory_id)?'selected':'' }}>{{ $inv->sku }} - {{ $inv->name }} </option>
+                              @endforeach
+                            </select>
                           </div>
                           <div class="col-12 col-sm-4">
                             <input value="{{ $item->item_price }}" type="number" name="item_price[]" placeholder="Harga Barang" min="1000" class="myfrm form-control">
@@ -153,7 +161,11 @@
     <div class="hdtuto control-group lst input-group" style="margin-top:10px">
       <div class="row">
           <div class="col-12 col-sm-4">
-            <input type="text" name="description[]" placeholder="Nama Barang" class="myfrm form-control">
+            <select class="form-control" name="inventory_id[]" class="inventorySelect">
+              @foreach ($inventories as $item)
+                <option value="{{ $item->id }}">{{ $item->sku }} - {{ $item->name }}</option>
+              @endforeach
+            </select>
           </div>
           <div class="col-12 col-sm-4">
             <input type="number" name="item_price[]" placeholder="Harga Barang" min="1000" class="myfrm form-control">
@@ -211,6 +223,7 @@
     });
 
     $('#customerSelect').select2(); // Anda perlu memasang plugin Select2 untuk ini
+    $('.inventorySelect').select2(); // Anda perlu memasang plugin Select2 untuk ini
 
 
   });

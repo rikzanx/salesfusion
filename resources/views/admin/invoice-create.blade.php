@@ -58,13 +58,15 @@
                   </div>
                   
                   <div class="form-group">
-                    <label for="exampleInputFile">Items</label>
+                    <label for="exampleInputFile">Items</label> <a href="{{ route('inventory.create') }}" class="">Tambah Item</a></label>
                   </div>
                   <div class="input-group hdtuto control-group lst increment" >
                     <div class="row">
-                        <div class="col-12 col-sm-4">
-                          <input type="text" name="description[]" placeholder="Nama Barang" class="myfrm form-control">
-                        </div>
+                        <select class="form-control" name="inventory_id[]" class="inventorySelect">
+                          @foreach ($inventories as $item)
+                            <option value="{{ $item->id }}">{{ $item->sku }} - {{ $item->name }}</option>
+                          @endforeach
+                        </select>
                         <div class="col-12 col-sm-4">
                           <input type="number" name="item_price[]" placeholder="Harga Barang" min="1000" class="myfrm form-control">
                         </div>
@@ -126,7 +128,11 @@
     <div class="hdtuto control-group lst input-group" style="margin-top:10px">
       <div class="row">
           <div class="col-12 col-sm-4">
-            <input type="text" name="description[]" placeholder="Nama Barang" class="myfrm form-control">
+            <select class="form-control" name="inventory_id[]" class="inventorySelect">
+              @foreach ($inventories as $item)
+                <option value="{{ $item->id }}">{{ $item->sku }} - {{ $item->name }}</option>
+              @endforeach
+            </select>
           </div>
           <div class="col-12 col-sm-4">
             <input type="number" name="item_price[]" placeholder="Harga Barang" min="1000" class="myfrm form-control">
@@ -185,6 +191,7 @@
     });
 
     $('#customerSelect').select2(); // Anda perlu memasang plugin Select2 untuk ini
+    $('.inventorySelect').select2(); // Anda perlu memasang plugin Select2 untuk ini
   });
 </script>
 @endsection

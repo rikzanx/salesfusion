@@ -107,7 +107,7 @@
     							<?php $subtotal = 0; ?>
                   @foreach($invoice->items as $item)
                     <tr>
-                        <td>{{ $item->description }}</td>
+                        <td>{{ $item->inventory->name }}</td>
                         <td class="text-center">@rupiah($item->item_price)</td>
                         <td class="text-center">{{ $item->qty }}</td>
                         <td class="text-right">@rupiah($item->item_price * $item->qty)</td>

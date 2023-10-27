@@ -92,7 +92,7 @@
           @foreach($invoice->items as $item)
             <tr>
                 <td>{{ $loop->index+1 }}</td>
-                <td>{{ $item->description }}</td>
+                <td>{{ $item->inventory->name }}</td>
                 <td>{{ $item->qty }}</td>
                 <td class="text-right">@rupiah($item->item_price)</td>
                 <td class="text-right">@rupiah($item->item_price * $item->qty)</td>

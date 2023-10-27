@@ -18,10 +18,16 @@ class Inventory extends Model
             "qty",
     ];
 
-    public function transactions(){
+    public function transactions()
+    {
         return $this->hasMany('App\Models\InventoryTransaction','inventory_id');
     }
-    public function images(){
+    public function images()
+    {
         return $this->hasMany('App\Models\ImagesInventory','inventory_id');
+    }
+    public function item_invoices()
+    {
+        return $this->hasMany('App\Models\Item','inventory_id');
     }
 }
