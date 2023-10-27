@@ -75,7 +75,11 @@
 
                   <div class="form-group">
                     @foreach($product->images as $item)
-                    <img src="{{ asset($item->image_product) }}" alt="">
+                    <div class="row">
+                      <div class="col-12">
+                        <img src="{{ asset($item->image_product) }}" alt="">
+                      </div>
+                    </div>
                     @endforeach
                   </div>
 
