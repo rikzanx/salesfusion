@@ -14,61 +14,59 @@
 <div id="container">
 	<div id="header">
 		<div id="logo">
-			<img src="http://placehold.it/230x70&text=logo" alt="">
+			<img src="{{ asset(config('app.company.image_company', 'img/img-company.svg')) }}" alt="">
 		</div>
 		<div id="reference">
-			<h3><strong>Facture</strong></h3>
-			<h4>Réf. : FA1703-00001</h4>
-			<p>Date facturation : 20/03/2017</p>
+			<h3><strong>Invoice</strong></h3>
+			<h4>No : {{ $invoice->no_invoice }}</h4>
+			<p>Date facturation : {{ $date_inv }}</p>
 		</div>
 	</div>
 
 	<div id="fromto">
 		<div id="from">
 			<p>
-				<strong>Your company</strong><br>
-				8 avenue des Champs Elysées <br>
-				75000 Paris <br><br>
-				Tél.: 01 00 00 00 00 <br>
+				<strong>{{ config('app.company.name', 'SalesFusion') }}</strong><br>
+				{{ config('app.company.address', "123 Main Street, Anytown, USA") }} <br>
+				Phone : {{ config('app.company.telp', "+6285101440330") }} <br><br>
 				Email: contact@website.com <br>
 				Web: www.website.com
 			</p>
 		</div>
 		<div id="to">
 			<p>
-				<strong>John Doe</strong><br>
-				10 rue Charles Rouxel<br>
-				77014 Paris
+				<strong>{{  $invoice->customer->name_customer}}</strong><br>
+				{{  $invoice->customer->address_customer}}<br>
+				{{  $invoice->customer->phone_customer}}
 			</p>
 		</div>
 	</div>
 
 	<div id="items">
-		<p>Montants exprimés en Euros</p>
 		<table>
+            <?php $subtotal = 0; ?>
+            @foreach($invoice->items as $item)
+            <!-- <tr>
+                <td>{{ $item->inventory->name }}</td>
+                <td class="text-center">@rupiah($item->item_price)</td>
+                <td class="text-center">{{ $item->qty }}</td>
+                <td class="text-right">@rupiah($item->total)</td>
+            </tr> -->
+            <?php $subtotal += $item->item_price * $item->qty; ?>
+            @endforeach
 			<tr>
-				<th>Désignation</th>
-				<th>TVA</th>
-				<th>P.U. HT</th>
-				<th>Qté</th>
-				<th>Total HT</th>
+				<th>Nama Barang</th>
+				<th>Harga</th>
+				<th>Jumlah</th>
+				<th>Total</th>
 			</tr>
 			<tr>
 				<td>Article</td>
 				<td>20%</td>
 				<td>3,99</td>
 				<td>1</td>
-				<td>3,99</td>
 			</tr>
 			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -79,17 +77,8 @@
 				<td></td>
 				<td></td>
 				<td></td>
-				<td></td>
 			</tr>
 			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -100,17 +89,8 @@
 				<td></td>
 				<td></td>
 				<td></td>
-				<td></td>
 			</tr>
 			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -121,17 +101,8 @@
 				<td></td>
 				<td></td>
 				<td></td>
-				<td></td>
 			</tr>
 			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -142,17 +113,8 @@
 				<td></td>
 				<td></td>
 				<td></td>
-				<td></td>
 			</tr>
 			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -163,6 +125,11 @@
 				<td></td>
 				<td></td>
 				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
 				<td></td>
 			</tr>
 			<tr>
@@ -170,6 +137,11 @@
 				<td></td>
 				<td></td>
 				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
 				<td></td>
 			</tr>
 			<tr>
@@ -177,10 +149,26 @@
 				<td></td>
 				<td></td>
 				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
 				<td></td>
 			</tr>
 			<tr>
 				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -191,22 +179,30 @@
 
 	<div id="summary">
 		<div id="note">
-			<h4>Note :</h4>
-			<p>Information complémentaire à ajouter.</p>
+			<h4>Catatan :</h4>
+			<p>{!! nl2br($invoice->comment) !!}</p>
 		</div>
 		<div id="total">
 			<table border="1">
 				<tr>
-					<td>Total HT</td>
-					<td>3,99</td>
+					<td>Subtotal</td>
+					<td>@rupiah($subtotal)</td>
 				</tr>
 				<tr>
-					<td>Total TVA 20%</td>
-					<td>0,80</td>
+					<td>Diskon</td>
+					<td>@rupiah($invoice->diskon_rate) ({{ number_format(($invoice->diskon_rate/$subtotal)*100,1) }}%)</td>
 				</tr>
 				<tr>
-					<td>Total TTC</td>
-					<td>4,79</td>
+					<td>Total</td>
+					<td>@rupiah($subtotal-($invoice->diskon_rate))</td>
+				</tr>
+                <tr>
+					<td>DP</td>
+					<td>@rupiah($invoice->dp)</td>
+				</tr>
+                <tr>
+					<td>Sisa Pembayaran</td>
+					<td>@rupiah(($subtotal-($invoice->diskon_rate))-$invoice->dp)</td>
 				</tr>
 			</table>
 		</div>
