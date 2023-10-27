@@ -20,7 +20,7 @@ class ItemController extends Controller
      */
     public function index()
     {
-        $items = Item::with('invoice')->get();
+        $items = Item::with('invoice','inventory')->get();
         // dd($items);
         return view('admin.item',[
             'items' => $items,

@@ -47,7 +47,7 @@
                     <tr>
                         <td>{{ $loop->index+1 }}</td>
                         <td>{{ $item->invoice->no_invoice }}</td>
-                        <td>{{ $item->description }}</td>
+                        <td>{{ $item->inventory->name }}</td>
                         <td>{{ $item->qty }}</td>
                         <td>{{ $item->item_price }}</td>
                         <td>
