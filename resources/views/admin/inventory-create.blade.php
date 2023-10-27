@@ -60,7 +60,7 @@
                                         <button class="btn btn-success btn-add-image" type="button"><i class="fldemo glyphicon glyphicon-plus"></i>Add</button>
                                         </div>
                                     </div>
-                                    <div class="clone hide">
+                                    <div class="clone hide" style="display:none;">
                                         <div class="hdtuto control-group lst input-group" style="margin-top:10px">
                                         <input type="file" name="filenames[]" class="myfrm form-control">
                                         <div class="input-group-btn"> 
