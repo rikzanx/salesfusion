@@ -101,6 +101,14 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="{{ route('inventorytransaction.index') }}" class="nav-link">
+              <i class="nav-icon fas fa-database"></i>
+              <p>
+                Inventory Transaksi Barang
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="{{ route('slider.index') }}" class="nav-link">
               <i class="nav-icon fas fa-images"></i>
               <p>
