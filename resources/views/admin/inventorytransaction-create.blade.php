@@ -45,7 +45,7 @@
                   </div>
                   <div class="form-group">
                     <label>Tipe Transaksi</label>
-                    <select class="form-control" name="tipe" id="tipeSelect">
+                    <select class="form-control" name="type" id="tipeSelect">
                       <option value="masuk">Masuk</option>
                       <option value="keluar">Keluar</option>
                     </select>

@@ -46,7 +46,7 @@
                   </div>
                   <div class="form-group">
                     <label>Tipe Transaksi</label>
-                    <select class="form-control" name="tipe" id="tipeSelect">
+                    <select class="form-control" name="type" id="tipeSelect">
                       <option value="masuk" {{ ("masuk" == $inventory_controller->type)?'selected':'' }}>Masuk</option>
                       <option value="keluar" {{ ("keluar" == $inventory_controller->type)?'selected':'' }}>Keluar</option>
                     </select>
