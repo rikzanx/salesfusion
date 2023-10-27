@@ -49,6 +49,12 @@
             <input type="text" value="{{ $inventory->description }}" name="description" class="form-control" id="exampleInputEmail1" placeholder="Enter the description">
         </div>
         <div class="form-group">
+            <label>Deskripsi</label>
+            <textarea id="description" name="description" class="form-control" rows="5" placeholder="Enter ...">
+            {{ $inventory->description }}"
+            </textarea>
+        </div>
+        <div class="form-group">
             <label for="exampleInputEmail1">Lokasi</label>
             <input type="text" value="{{ $inventory->lokasi }}" name="lokasi" class="form-control" id="exampleInputEmail1" placeholder="Enter the location">
         </div>

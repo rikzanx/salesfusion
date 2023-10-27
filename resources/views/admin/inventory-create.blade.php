@@ -44,8 +44,9 @@
                                         <input type="text" name="name" class="form-control" id="exampleInputEmail1" placeholder="Enter the name">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Description</label>
-                                        <input type="text" name="description" class="form-control" id="exampleInputEmail1" placeholder="Enter the description">
+                                        <label>Deskripsi</label>
+                                        <textarea id="description" name="description" class="form-control" rows="5" placeholder="Enter ...">
+                                        </textarea>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Lokasi</label>
