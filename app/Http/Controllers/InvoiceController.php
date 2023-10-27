@@ -60,7 +60,7 @@ class InvoiceController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'customer_id' => 'required',
-            'description' => 'required',
+            'inventory_id' => 'required',
             'qty' => 'required',
             'item_price' => 'required',
             'diskon_rate' => 'required',
@@ -185,7 +185,7 @@ class InvoiceController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'customer_id' => 'required',
-            'description' => 'required',
+            'inventory_id' => 'required',
             'qty' => 'required',
             'item_price' => 'required',
             'diskon_rate' => 'required',
