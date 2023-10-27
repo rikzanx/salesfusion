@@ -65,7 +65,7 @@
 			</tr>
             <?php $subtotal += $item->item_price * $item->qty; ?>
             @endforeach
-            @for($i=$total_row_kosong;$i<=0;$i++)
+            @for($i=1$i<=$total_row_kosong;$i++)
             <tr>
 				<td></td>
 				<td></td>
