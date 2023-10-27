@@ -155,12 +155,13 @@
 
 @section('js')
 <script type="text/javascript">
-  function modaldeleteimage(id){
-        // alert(id);
-        var url = $('.delete-form-image').attr('action');
-        $('.delete-form-image').attr('action',url.replace(':id',id));
-        $('#modal-default-image').modal('show');
-    }
+  function modaldeleteimage(id) {
+    var form = $('.delete-form-image');
+    form.attr('action', form.attr('action').replace(':id', id));
+
+    $('#modal-default-image').modal('show');
+  }
+
   $(document).ready(function() {
     $(".btn-add-image").click(function(){ 
         var lsthmtl = $(".clone").html();
