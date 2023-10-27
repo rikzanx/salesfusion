@@ -343,8 +343,7 @@
 	</div>
 
 	<div id="footer">
-		<p>Société à responsabilité limité (SARL) - Capital de 1 000 000 € - SIRET: 87564738493127 <br>
-			NAF-APE: 6202A - Num. TVA: FR28987856541</p>
+		<p>Invoice {{$invoice->no_invoice}} {{ config('app.company.name', "SalesFusion") }}</p>
 	</div>
 </div>
 
