@@ -154,7 +154,6 @@ class ProductController extends Controller
             $product->description = $request->description;
             $product->save();
             if($request->hasfile('filenames')){
-                $delete = ImagesProduct::where('product_id',$id)->delete();
                 foreach($request->file('filenames') as $file)
                 {
                     $imageproduct = new ImagesProduct();
