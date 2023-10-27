@@ -15,6 +15,10 @@ class CreateInventoryTransactionsTable extends Migration
     {
         Schema::create('inventory_transactions', function (Blueprint $table) {
             $table->id();
+            $table->integer('inventory_id');
+            $table->enum('type', ['masuk', 'keluar']);
+            $table->integer('quantity');
+            $table->text('notes')->nullable();
             $table->timestamps();
         });
     }

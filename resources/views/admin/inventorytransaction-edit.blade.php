@@ -8,12 +8,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>{{ config('app.company.name', 'Laravel') }} - Produk</h1>
+            <h1>{{ config('app.company.name', 'Laravel') }} - Transaksi Inventory</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a></li>
-              <li class="breadcrumb-item active">Produk</li>
+              <li class="breadcrumb-item active">Transaksi Inventory</li>
             </ol>
           </div>
         </div>
@@ -35,6 +35,35 @@
               <form method="POST" action="{{ route('produk.update',$product->id) }}" enctype="multipart/form-data">
                 @csrf
                 @method('PATCH')
+                <div class="card-body">
+                  <div class="form-group">
+                    <label>Inventory <a href="{{ route('inventory.create') }}" class="btn btn-sm btn-primary">Tambah Inventory</a></label>
+                    <select class="form-control" name="inventory_id" id="inventorySelect">
+                      @foreach ($inventories as $item)
+                        <option value="{{ $item->id }}" {{ ($item->id == $inventory_controller->inventory_id)?'selected':'' }}  >{{$item->sku}} - {{ $item->name }}</option>
+                      @endforeach
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Tipe Transaksi</label>
+                    <select class="form-control" name="tipe" id="tipeSelect">
+                      <option value="masuk" {{ ("masuk" == $inventory_controller->type)?'selected':'' }}>Masuk</option>
+                      <option value="keluar" {{ ("keluar" == $inventory_controller->type)?'selected':'' }}>Keluar</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Jumlah</label>
+                    <input value="{{ $inventory_transaction->quantity }}" type="number" name="quantity" class="form-control" id="exampleInputEmail1" placeholder="Masukkan jumlah" >
+                  </div>
+                  <div class="form-group">
+                    <label>Catatan</label>
+                    <textarea id="notes" name="notes" class="form-control" rows="3" placeholder="Enter ...">
+                    {{ $inventory_transaction->notes }}"
+                    </textarea>
+                  </div>
+                </div>
+                <!-- /.card-body -->
+
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Nama Produk</label>

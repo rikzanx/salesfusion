@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ config('app.name', 'Laravel') }}</title>
+  <title>{{ config('app.company.name', 'Laravel') }}</title>
   
   <link rel="icon" href="{{ asset(config('app.company.image_company', 'img/img-company.svg')) }}" type="image/x-icon">
   <link rel="apple-touch-icon" href="{{ asset(config('app.company.image_company', 'img/img-company.svg')) }}" type="image/x-icon">
@@ -61,7 +61,7 @@
     <!-- Brand Logo -->
     <a href="{{ route('admin.dashboard') }}" class="brand-link">
       <img src="{{ asset('dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">{{ config('app.name', 'Laravel') }}</span>
+      <span class="brand-text font-weight-light">{{ config('app.company.name', 'Laravel') }}</span>
     </a>
     <!-- Sidebar -->
     <div class="sidebar">

@@ -8,12 +8,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>{{ config('app.company.name', 'Laravel') }} - Customer</h1>
+            <h1>{{ config('app.company.name', 'Laravel') }} - Transaksi Inventory</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a></li>
-              <li class="breadcrumb-item active">Customer</li>
+              <li class="breadcrumb-item active">Transaksi Inventory</li>
             </ol>
           </div>
         </div>
@@ -27,7 +27,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <a href="{{ route('customer.create') }}" class="btn btn-success"><span class="fas fa-plus"></span> Tambah Customer</a>
+                <a href="{{ route('inventorytransaction.create') }}" class="btn btn-success"><span class="fas fa-plus"></span> tambah produk</a>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -35,21 +35,23 @@
                   <thead>
                   <tr>
                     <th>No</th>
-                    <th>Nama</th>
-                    <th>Alamat</th>
-                    <th>Telp</th>
+                    <th>Nama Barang</th>
+                    <th>Jenis</th>
+                    <th>Jumlah</th>
+                    <th>Catatan</th>
                     <th>Aksi</th>
                   </tr>
                   </thead>
                   <tbody>
-                    @foreach ($customers as $item)
+                    @foreach ($inventory_transactions as $item)
                     <tr>
                         <td>{{ $loop->index+1 }}</td>
-                        <td>{{ $item->name_customer }}</td>
-                        <td>{{ $item->address_customer }}</td>
-                        <td>{{ $item->phone_customer }}</td>
+                        <td>{{ $item->inventory->name }}</td>
+                        <td>{{ $item->type }}</td>
+                        <td>{{ $item->quantity }}</td>
+                        <td>{{ $item->catatan }}</td>
                         <td>
-                            <a class="btn btn-primary" href="{{ route('customer.edit',$item->id) }}"><span class="fas fa-edit"></span></a>
+                            <a class="btn btn-primary" href="{{ route('inventorytransaction.edit',$item->id) }}"><span class="fas fa-edit"></span></a>
                             <button class="btn btn-danger" onclick="modaldelete({{ $item->id }})"><span class="fas fa-trash"></span></button>
                         </td>
                     </tr>
@@ -58,9 +60,10 @@
                   <tfoot>
                     <tr>
                       <th>No</th>
-                      <th>Nama</th>
-                      <th>Alamat</th>
-                      <th>Telp</th>
+                      <th>Nama Barang</th>
+                      <th>Jenis</th>
+                      <th>Jumlah</th>
+                      <th>Catatan</th>
                       <th>Aksi</th>
                     </tr>
                   </tfoot>
@@ -92,7 +95,7 @@
         <div class="modal-body">
           <p>Apakah anda yakin akan menghapus data ini&hellip;</p>
         </div>
-        <form action="{{ route('customer.destroy', ':id') }}" method="POST" class="delete-form">
+        <form action="{{ route('inventorytransaction.destroy', ':id') }}" method="POST" class="delete-form">
             @csrf
             @method('DELETE')
             <div class="modal-footer justify-content-between">

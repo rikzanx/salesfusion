@@ -12,12 +12,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">{{ config('app.name', 'Laravel') }} - Dashboard</h1>
+            <h1 class="m-0">{{ config('app.company.name', 'Laravel') }} - Dashboard</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard - {{ config('app.name', 'Laravel') }}</li>
+              <li class="breadcrumb-item active">Dashboard - {{ config('app.company.name', 'Laravel') }}</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->

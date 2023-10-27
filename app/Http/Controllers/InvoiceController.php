@@ -56,7 +56,7 @@ class InvoiceController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'id_customer' => 'required',
+            'customer_id' => 'required',
             'description' => 'required',
             'qty' => 'required',
             'item_price' => 'required',
@@ -85,7 +85,7 @@ class InvoiceController extends Controller
             }
             $invoice->duedate = $request->duedate;
             $invoice->tanggal_pengiriman = $request->tanggal_pengiriman;
-            $invoice->id_customer = $request->id_customer;
+            $invoice->customer_id = $request->customer_id;
             $invoice->diskon_rate = $request->diskon_rate;
             $invoice->tax_rate = $request->tax_rate;
             $invoice->profit = $request->profit;
@@ -178,7 +178,7 @@ class InvoiceController extends Controller
     public function update(Request $request, $id)
     {
         $validator = Validator::make($request->all(), [
-            'id_customer' => 'required',
+            'customer_id' => 'required',
             'description' => 'required',
             'qty' => 'required',
             'item_price' => 'required',
@@ -204,7 +204,7 @@ class InvoiceController extends Controller
             $invoice = Invoice::findOrFail($id);
             $invoice->duedate = $request->duedate;
             $invoice->tanggal_pengiriman = $request->tanggal_pengiriman;
-            $invoice->id_customer = $request->id_customer;
+            $invoice->customer_id = $request->customer_id;
             $invoice->diskon_rate = $request->diskon_rate;
             $invoice->tax_rate = $request->tax_rate;
             $invoice->profit = $request->profit;

@@ -74,7 +74,8 @@ Route::group(['prefix' => 'admin'],function(){
     Route::resource('surat-penawaran',SuratPenawaranController::class);
     Route::resource('keuangan',KeuanganController::class);
     Route::resource('inventories',InventoryController::class);
-
+    Route::resource('inventorytransaction',InventoryTransactionController::class);
+    
     Route::get('proforma/invoice/{id}',[InvoiceController::class, 'show_proform'])->name("show_proform");
     Route::get('suratjalan/invoice/{id}',[InvoiceController::class, 'surat_jalan'])->name("surat_jalan");
 });

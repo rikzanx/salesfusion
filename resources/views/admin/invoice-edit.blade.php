@@ -8,7 +8,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>{{ config('app.name', 'Laravel') }} - Produk</h1>
+            <h1>{{ config('app.company.name', 'Laravel') }} - Produk</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -46,9 +46,9 @@
                   </div>
                   <div class="form-group">
                     <label>Customer <a href="{{ route('customer.create') }}" class="btn btn-sm btn-primary">Tambah Customer</a></label>
-                    <select class="form-control" name="id_customer" id="customerSelect">
+                    <select class="form-control" name="customer_id" id="customerSelect">
                       @foreach ($customers as $item)
-                        <option value="{{ $item->id }}" {{ ($item->id == $invoice->id_customer)?'selected':'' }}>{{ $item->name_customer }} - {{ $item->address_customer }} </option>
+                        <option value="{{ $item->id }}" {{ ($item->id == $invoice->customer_id)?'selected':'' }}>{{ $item->name_customer }} - {{ $item->address_customer }} </option>
                       @endforeach
                     </select>
                   </div>

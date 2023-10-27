@@ -9,7 +9,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset(config('app.company.image_company', 'img/img-company.svg')) }}">
 
 
-  <title>{{ config('app.name', 'Laravel') }} | Log in</title>
+  <title>{{ config('app.company.name', 'Laravel') }} | Log in</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -23,7 +23,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="{{ route('login') }}"><b>{{ config('app.name', 'Laravel') }}</b></a>
+    <a href="{{ route('login') }}"><b>{{ config('app.company.name', 'Laravel') }}</b></a>
   </div>
   <!-- /.login-logo -->
   <div class="card">

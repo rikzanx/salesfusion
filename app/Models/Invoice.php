@@ -14,7 +14,7 @@ class Invoice extends Model
             "id_inv",
             "no_invoice",
             "duedate",
-            "id_customer",
+            "customer_id",
             "comment",
             "diskon_rate",
             "tax_rate",
@@ -24,7 +24,7 @@ class Invoice extends Model
             "dp"
     ];
     public function customer(){
-        return $this->hasOne('App\Models\Customer','id','id_customer');
+        return $this->hasOne('App\Models\Customer','id','customer_id');
     }
     public function items(){
         return $this->hasMany('App\Models\Item','invoice_id');

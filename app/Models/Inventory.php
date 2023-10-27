@@ -17,4 +17,8 @@ class Inventory extends Model
             "lokasi",
             "qty",
     ];
+
+    public function transactions(){
+        return $this->hasMany('App\Models\InventoryTransaction','inventory_id');
+    }
 }

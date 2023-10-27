@@ -8,12 +8,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>{{ config('app.company.name', 'Laravel') }} - Keuangan</h1>
+            <h1>{{ config('app.company.name', 'Laravel') }} - Transaksi Inventory</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a></li>
-              <li class="breadcrumb-item active">Keuangan</li>
+              <li class="breadcrumb-item active">Transaksi Inventory</li>
             </ol>
           </div>
         </div>
@@ -28,29 +28,36 @@
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Create Keuangan</h3>
+                <h3 class="card-title">Create Transaksi Inventory</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form method="POST" action="{{ route('keuangan.store') }}" enctype="multipart/form-data">
+              <form method="POST" action="{{ route('inventorytransaction.store') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Jumlah</label>
-                    <input type="text" name="amount" class="form-control formatted-number" id="exampleInputEmail1" placeholder="Masukkan jumlah">
-                  </div>
-                  <div class="form-group">
-                    <label>Tipe Keuangan</label>
-                    <select class="form-control" name="tipe" id="tipeSelect">
-                      <option value="pemasukan">pemasukan</option>
-                      <option value="pengeluaran">pengeluaran</option>
+                    <label>Inventory <a href="{{ route('inventory.create') }}" class="btn btn-sm btn-primary">Tambah Inventory</a></label>
+                    <select class="form-control" name="inventory_id" id="inventorySelect">
+                      @foreach ($inventories as $item)
+                        <option value="{{ $item->id }}">{{$item->sku}} - {{ $item->name }}</option>
+                      @endforeach
                     </select>
                   </div>
                   <div class="form-group">
-                      <label for="exampleTextarea">Deskripsi</label>
-                      <textarea name="description" class="form-control" id="exampleTextarea" rows="3" placeholder="Masukkan deskripsi"></textarea>
+                    <label>Tipe Transaksi</label>
+                    <select class="form-control" name="tipe" id="tipeSelect">
+                      <option value="masuk">Masuk</option>
+                      <option value="keluar">Keluar</option>
+                    </select>
                   </div>
-
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Jumlah</label>
+                    <input type="number" name="quantity" class="form-control" id="exampleInputEmail1" placeholder="Masukkan jumlah" value="">
+                  </div>
+                  <div class="form-group">
+                    <label>Catatan</label>
+                    <textarea id="notes" name="notes" class="form-control" rows="3" placeholder="Enter ..."></textarea>
+                  </div>
                 </div>
                 <!-- /.card-body -->
 
@@ -76,14 +83,7 @@
 @section('js')
 <script type="text/javascript">
   $(document).ready(function() {
-    $(".btn-add-image").click(function(){ 
-        var lsthmtl = $(".clone").html();
-        $(".increment").after(lsthmtl);
-    });
-    $("body").on("click",".btn-danger",function(){ 
-        $(this).parents(".hdtuto").remove();
-    });
-    $('#tipeSelect').select2();
+    $('#inventorySelect').select2();
   });
 </script>
 @endsection
