@@ -50,9 +50,7 @@
         </div>
         <div class="form-group">
             <label>Deskripsi</label>
-            <textarea id="description" name="description" class="form-control" rows="5" placeholder="Enter ...">
-            {{ $inventory->description }}"
-            </textarea>
+            <textarea id="description" name="description" class="form-control" rows="5" placeholder="Enter ...">{{ $inventory->description }}"</textarea>
         </div>
         <div class="form-group">
             <label for="exampleInputEmail1">Lokasi</label>

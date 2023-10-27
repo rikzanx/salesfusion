@@ -32,7 +32,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form method="POST" action="{{ route('produk.update',$product->id) }}" enctype="multipart/form-data">
+              <form method="POST" action="{{ route('produk.update',$inventory_transaction->id) }}" enctype="multipart/form-data">
                 @csrf
                 @method('PATCH')
                 <div class="card-body">
@@ -40,15 +40,15 @@
                     <label>Inventory <a href="{{ route('inventories.create') }}" class="btn btn-sm btn-primary">Tambah Inventory</a></label>
                     <select class="form-control" name="inventory_id" id="inventorySelect">
                       @foreach ($inventories as $item)
-                        <option value="{{ $item->id }}" {{ ($item->id == $inventory_controller->inventory_id)?'selected':'' }}  >{{$item->sku}} - {{ $item->name }}</option>
+                        <option value="{{ $item->id }}" {{ ($item->id == $inventory_transaction->inventory_id)?'selected':'' }}  >{{$item->sku}} - {{ $item->name }}</option>
                       @endforeach
                     </select>
                   </div>
                   <div class="form-group">
                     <label>Tipe Transaksi</label>
                     <select class="form-control" name="type" id="tipeSelect">
-                      <option value="masuk" {{ ("masuk" == $inventory_controller->type)?'selected':'' }}>Masuk</option>
-                      <option value="keluar" {{ ("keluar" == $inventory_controller->type)?'selected':'' }}>Keluar</option>
+                      <option value="masuk" {{ ("masuk" == $inventory_transaction->type)?'selected':'' }}>Masuk</option>
+                      <option value="keluar" {{ ("keluar" == $inventory_transaction->type)?'selected':'' }}>Keluar</option>
                     </select>
                   </div>
                   <div class="form-group">
@@ -57,9 +57,7 @@
                   </div>
                   <div class="form-group">
                     <label>Catatan</label>
-                    <textarea id="notes" name="notes" class="form-control" rows="3" placeholder="Enter ...">
-                    {{ $inventory_transaction->notes }}"
-                    </textarea>
+                    <textarea id="notes" name="notes" class="form-control" rows="3" placeholder="Enter ...">{{ $inventory_transaction->notes }}"</textarea>
                   </div>
                 </div>
                 <!-- /.card-body -->
