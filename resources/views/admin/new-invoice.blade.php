@@ -1,149 +1,222 @@
-
-
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-
+<html lang="en">
 <head>
-  <!-- Meta Tags -->
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="ThemeMarch">
-  <!-- Site Title -->
-  <title>General Invoice</title>
-  <link rel="stylesheet" href="{{ asset('invoice/style.css') }}">
+	<meta charset="UTF-8">
+	<title>Simple invoice html template</title>
 </head>
-
 <body>
-  <div class="cs-container">
-    <div class="cs-invoice cs-style1">
-      <div class="cs-invoice_in" id="download_section">
-        <div class="cs-invoice_head cs-type1 cs-mb25">
-          <div class="cs-invoice_left">
-            <p class="cs-invoice_number cs-primary_color cs-mb5 cs-f16"><b class="cs-primary_color">Invoice No:</b> #SM75692</p>
-            <p class="cs-invoice_date cs-primary_color cs-m0"><b class="cs-primary_color">Date: </b>05.01.2022</p>
-          </div>
-          <div class="cs-invoice_right cs-text_right">
-            <div class="cs-logo cs-mb5"><img src="{{ asset('invoice/logo.svg') }}" alt="Logo"></div>
-          </div>
-        </div>
-        <div class="cs-invoice_head cs-mb10">
-          <div class="cs-invoice_left">
-            <b class="cs-primary_color">Invoice To:</b>
-            <p>
-              Jennifer Richards <br>
-              365 Bloor Street East, Toronto, <br>Ontario, M4W 3L4, <br>
-              Canada
-            </p>
-          </div>
-          <div class="cs-invoice_right cs-text_right">
-            <b class="cs-primary_color">Pay To:</b>
-            <p>
-              Biman Airlines <br>
-              237 Roanoke Road, North York, <br>
-              Ontario, Canada <br>
-              demo@email.com
-            </p>
-          </div>
-        </div>
-        <div class="cs-table cs-style1">
-          <div class="cs-round_border">
-            <div class="cs-table_responsive">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="cs-width_3 cs-semi_bold cs-primary_color cs-focus_bg">Item</th>
-                    <th class="cs-width_4 cs-semi_bold cs-primary_color cs-focus_bg">Description</th>
-                    <th class="cs-width_2 cs-semi_bold cs-primary_color cs-focus_bg">Qty</th>
-                    <th class="cs-width_1 cs-semi_bold cs-primary_color cs-focus_bg">Price</th>
-                    <th class="cs-width_2 cs-semi_bold cs-primary_color cs-focus_bg cs-text_right">Total</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="cs-width_3">App Development</td>
-                    <td class="cs-width_4">Mobile & Ios Application Development</td>
-                    <td class="cs-width_2">2</td>
-                    <td class="cs-width_1">$460</td>
-                    <td class="cs-width_2 cs-text_right">$920</td>
-                  </tr>
-                  <tr>
-                    <td class="cs-width_3">Ui/UX Design</td>
-                    <td class="cs-width_4">Mobile & Ios Mobile App Design, Product Design</td>
-                    <td class="cs-width_2">1</td>
-                    <td class="cs-width_1">$220</td>
-                    <td class="cs-width_2 cs-text_right">$220</td>
-                  </tr>
-                  <tr>
-                    <td class="cs-width_3">Web Design</td>
-                    <td class="cs-width_4">Web Design & Development</td>
-                    <td class="cs-width_2">2</td>
-                    <td class="cs-width_1">$120</td>
-                    <td class="cs-width_2 cs-text_right">#240</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="cs-invoice_footer cs-border_top">
-              <div class="cs-left_footer cs-mobile_hide">
-                <p class="cs-mb0"><b class="cs-primary_color">Additional Information:</b></p>
-                <p class="cs-m0">At check in you may need to present the credit <br>card used for payment of this ticket.</p>
-              </div>
-              <div class="cs-right_footer">
-                <table>
-                  <tbody>
-                    <tr class="cs-border_left">
-                      <td class="cs-width_3 cs-semi_bold cs-primary_color cs-focus_bg">Subtoal</td>
-                      <td class="cs-width_3 cs-semi_bold cs-focus_bg cs-primary_color cs-text_right">$1140</td>
-                    </tr>
-                    <tr class="cs-border_left">
-                      <td class="cs-width_3 cs-semi_bold cs-primary_color cs-focus_bg">Tax</td>
-                      <td class="cs-width_3 cs-semi_bold cs-focus_bg cs-primary_color cs-text_right">-$20</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          <div class="cs-invoice_footer">
-            <div class="cs-left_footer cs-mobile_hide"></div>
-            <div class="cs-right_footer">
-              <table>
-                <tbody>
-                  <tr class="cs-border_none">
-                    <td class="cs-width_3 cs-border_top_0 cs-bold cs-f16 cs-primary_color">Total Amount</td>
-                    <td class="cs-width_3 cs-border_top_0 cs-bold cs-f16 cs-primary_color cs-text_right">$1160</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div class="cs-note">
-          <div class="cs-note_left">
-            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M416 221.25V416a48 48 0 01-48 48H144a48 48 0 01-48-48V96a48 48 0 0148-48h98.75a32 32 0 0122.62 9.37l141.26 141.26a32 32 0 019.37 22.62z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path d="M256 56v120a32 32 0 0032 32h120M176 288h160M176 368h160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
-          </div>
-          <div class="cs-note_right">
-            <p class="cs-mb0"><b class="cs-primary_color cs-bold">Note:</b></p>
-            <p class="cs-m0">Here we can write a additional notes for the client to get a better understanding of this invoice.</p>
-          </div>
-        </div><!-- .cs-note -->
-      </div>
-      <div class="cs-invoice_btns cs-hide_print">
-        <a href="javascript:window.print()" class="cs-invoice_btn cs-color1">
-          <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M384 368h24a40.12 40.12 0 0040-40V168a40.12 40.12 0 00-40-40H104a40.12 40.12 0 00-40 40v160a40.12 40.12 0 0040 40h24" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><rect x="128" y="240" width="256" height="208" rx="24.32" ry="24.32" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path d="M384 128v-24a40.12 40.12 0 00-40-40H168a40.12 40.12 0 00-40 40v24" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><circle cx="392" cy="184" r="24"/></svg>
-          <span>Print</span>
-        </a>
-        <button id="download_btn" class="cs-invoice_btn cs-color2">
-          <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Download</title><path d="M336 176h40a40 40 0 0140 40v208a40 40 0 01-40 40H136a40 40 0 01-40-40V216a40 40 0 0140-40h40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M176 272l80 80 80-80M256 48v288"/></svg>
-          <span>Download</span>
-        </button>
-      </div>
-    </div>
-  </div>
-  <script src="{{ asset('invoice/jquery.min.js') }}"></script>
-  <script src="{{ asset('invoice/jspdf.min.js') }}"></script>
-  <script src="{{ asset('invoice/html2canvas.min.js') }}"></script>
-  <script src="{{ asset('invoice/main.js') }}"></script>
+
+<style>
+	@import "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700";html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,total,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}body{height:840px;width:592px;margin:auto;font-family:'Open Sans',sans-serif;font-size:12px}strong{font-weight:700}#container{position:relative;padding:4%}#header{height:80px}#header > #reference{float:right;text-align:right}#header > #reference h3{margin:0}#header > #reference h4{margin:0;font-size:85%;font-weight:600}#header > #reference p{margin:0;margin-top:2%;font-size:85%}#header > #logo{width:50%;float:left}#fromto{height:160px}#fromto > #from,#fromto > #to{width:45%;min-height:90px;margin-top:30px;font-size:85%;padding:1.5%;line-height:120%}#fromto > #from{float:left;width:45%;background:#efefef;margin-top:30px;font-size:85%;padding:1.5%}#fromto > #to{float:right;border:solid grey 1px}#items{margin-top:10px}#items > p{font-weight:700;text-align:right;margin-bottom:1%;font-size:65%}#items > table{width:100%;font-size:85%;border:solid grey 1px}#items > table th:first-child{text-align:left}#items > table th{font-weight:400;padding:1px 4px}#items > table td{padding:1px 4px}#items > table th:nth-child(2),#items > table th:nth-child(4){width:45px}#items > table th:nth-child(3){width:60px}#items > table th:nth-child(5){width:80px}#items > table tr td:not(:first-child){text-align:right;padding-right:1%}#items table td{border-right:solid grey 1px}#items table tr td{padding-top:3px;padding-bottom:3px;height:10px}#items table tr:nth-child(1){border:solid grey 1px}#items table tr th{border-right:solid grey 1px;padding:3px}#items table tr:nth-child(2) > td{padding-top:8px}#summary{height:170px;margin-top:30px}#summary #note{float:left}#summary #note h4{font-size:10px;font-weight:600;font-style:italic;margin-bottom:4px}#summary #note p{font-size:10px;font-style:italic}#summary #total table{font-size:85%;width:260px;float:right}#summary #total table td{padding:3px 4px}#summary #total table tr td:last-child{text-align:right}#summary #total table tr:nth-child(3){background:#efefef;font-weight:600}#footer{margin:auto;position:absolute;left:4%;bottom:4%;right:4%;border-top:solid grey 1px}#footer p{margin-top:1%;font-size:65%;line-height:140%;text-align:center}
+</style>
+
+
+<div id="container">
+	<div id="header">
+		<div id="logo">
+			<img src="http://placehold.it/230x70&text=logo" alt="">
+		</div>
+		<div id="reference">
+			<h3><strong>Facture</strong></h3>
+			<h4>Réf. : FA1703-00001</h4>
+			<p>Date facturation : 20/03/2017</p>
+		</div>
+	</div>
+
+	<div id="fromto">
+		<div id="from">
+			<p>
+				<strong>Your company</strong><br>
+				8 avenue des Champs Elysées <br>
+				75000 Paris <br><br>
+				Tél.: 01 00 00 00 00 <br>
+				Email: contact@website.com <br>
+				Web: www.website.com
+			</p>
+		</div>
+		<div id="to">
+			<p>
+				<strong>John Doe</strong><br>
+				10 rue Charles Rouxel<br>
+				77014 Paris
+			</p>
+		</div>
+	</div>
+
+	<div id="items">
+		<p>Montants exprimés en Euros</p>
+		<table>
+			<tr>
+				<th>Désignation</th>
+				<th>TVA</th>
+				<th>P.U. HT</th>
+				<th>Qté</th>
+				<th>Total HT</th>
+			</tr>
+			<tr>
+				<td>Article</td>
+				<td>20%</td>
+				<td>3,99</td>
+				<td>1</td>
+				<td>3,99</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+
+	<div id="summary">
+		<div id="note">
+			<h4>Note :</h4>
+			<p>Information complémentaire à ajouter.</p>
+		</div>
+		<div id="total">
+			<table border="1">
+				<tr>
+					<td>Total HT</td>
+					<td>3,99</td>
+				</tr>
+				<tr>
+					<td>Total TVA 20%</td>
+					<td>0,80</td>
+				</tr>
+				<tr>
+					<td>Total TTC</td>
+					<td>4,79</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div id="footer">
+		<p>Société à responsabilité limité (SARL) - Capital de 1 000 000 € - SIRET: 87564738493127 <br>
+			NAF-APE: 6202A - Num. TVA: FR28987856541</p>
+	</div>
+</div>
+
 </body>
 </html>
