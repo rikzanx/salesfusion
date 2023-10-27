@@ -47,7 +47,7 @@
 
     </style>
 </head>
-<div class="container">
+<div class="container-fluid">
     <div class="invoice">
       <div class="row">
         <div class="col-6">
