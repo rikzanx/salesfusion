@@ -14,7 +14,7 @@
 <div id="container">
 	<div id="header">
 		<div id="logo">
-			<img src="{{ asset(config('app.company.image_company', 'img/img-company.svg')) }}" alt="">
+			<!-- <img src="{{ asset(config('app.company.image_company', 'img/img-company.svg')) }}" alt=""> -->
 		</div>
 		<div id="reference">
 			<h3><strong>Invoice</strong></h3>
