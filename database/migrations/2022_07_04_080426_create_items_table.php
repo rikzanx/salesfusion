@@ -16,8 +16,9 @@ class CreateItemsTable extends Migration
         Schema::create('items', function (Blueprint $table) {
             $table->id();
             $table->integer("invoice_id");
+            $table->integer("inventory_id");
             $table->string("item_of");
-            $table->string("description");
+            $table->string("description")->nullable();
             $table->integer("qty");
             $table->decimal("item_price",10,2)->default(0);
             $table->date("duedate")->nullable();
