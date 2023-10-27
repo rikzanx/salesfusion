@@ -51,7 +51,7 @@
                         <td>{{ $item->qty }}</td>
                         <td>{{ $item->item_price }}</td>
                         <td>
-                            <a class="btn btn-success" href="{{ route('invoice.show',$item->invoice->id) }}" target="_blank"><span class="fas fa-eye"></span></a>
+                            <a class="btn btn-success" href="{{ route('invoice.show',$item->invoice->id) }}" ><span class="fas fa-eye"></span></a>
                         </td>
                     </tr>
                     @endforeach
