@@ -1,230 +1,149 @@
-<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
-<html xmlns='https://www.w3.org/1999/xhtml'>
+
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
 <head>
-<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
-<body style='font-family:Tahoma;font-size:12px;color: #333333;background-color:#FFFFFF;'>
-<table align='center' border='0' cellpadding='0' cellspacing='0' style='height:842px; width:595px;font-size:12px;'>
-  <tr>
-    <td valign='top'><table width='100%' cellspacing='0' cellpadding='0'>
-        <tr>
-          <td valign='bottom' width='50%' height='50'><div align='left'><img src='https://www.inv24.com/components/Users/pics/50c86533af47b/thumbs/0.jpg' /></div><br /></td>
+  <!-- Meta Tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="ThemeMarch">
+  <!-- Site Title -->
+  <title>General Invoice</title>
+  <link rel="stylesheet" href="{{ asset('invoice/style.css') }}">
+</head>
 
-          <td width='50%'>&nbsp;</td>
-        </tr>
-      </table>Bill To: <br/><br/>
-      <table width='100%' cellspacing='0' cellpadding='0'>
-      <tr>
-        <td valign='top' width='35%' style='font-size:12px;'> <strong >[Client's company name]</strong><br /> 
-[Client's company address line 1]<br />
-[Client's company address line 2] <br/>
-
-</td>
-        <td valign='top' width='35%'>
-</td>
-        <td valign='top' width='30%' style='font-size:12px;'>Invoice Date: 03/03/2021<br/>
-		Due Date: 03/18/2021 <br/>
-		
-		
-		</td>
-
-      </tr>
-    </table>
-    <table width='100%' height='100' cellspacing='0' cellpadding='0'>
-      <tr>
-        <td><div align='center' style='font-size: 14px;font-weight: bold;'>Credit note #  137 </div></td>
-      </tr>
-    </table>
-<table width='100%' cellspacing='0' cellpadding='2' border='1' bordercolor='#CCCCCC'>
-      <tr>
-
-        <td width='35%' bordercolor='#ccc' bgcolor='#f2f2f2' style='font-size:12px;'><strong>Description </strong></td>
-        <td bordercolor='#ccc' bgcolor='#f2f2f2' style='font-size:12px;'><strong>Qty</strong></td>
-        <td bordercolor='#ccc' bgcolor='#f2f2f2' style='font-size:12px;'><strong>Unit Price</strong></td>
-        <td bordercolor='#ccc' bgcolor='#f2f2f2' style='font-size:12px;'><strong>Subtotal</strong></td>
-  
-        </tr>
-      <tr style="display:none;"><td colspan="*"><tr>
-
-<td valign='top' style='font-size:12px;'>my product (refund)</td>
-<td valign='top' style='font-size:12px;'>3 </td>
-<td valign='top' style='font-size:12px;'>115.00 </td>
-<td valign='top' style='font-size:12px;'>345.00 </td>
-
-</tr><tr>
-
-<td valign='top' style='font-size:12px;'>my service (refund)</td>
-<td valign='top' style='font-size:12px;'>3 </td>
-<td valign='top' style='font-size:12px;'>250.00 </td>
-<td valign='top' style='font-size:12px;'>750.00 </td>
-
-</tr><tr>
-
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-
-</tr><tr>
-
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-
-</tr><tr>
-
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-
-</tr><tr>
-
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-
-</tr><tr>
-
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-
-</tr><tr>
-
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-
-</tr><tr>
-
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-
-</tr><tr>
-
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-
-</tr><tr>
-
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-
-</tr><tr>
-
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-
-</tr><tr>
-
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-
-</tr><tr>
-
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-
-</tr><tr>
-
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-
-</tr><tr>
-
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-
-</tr><tr>
-
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-
-</tr><tr>
-
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-
-</tr><tr>
-
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-
-</tr><tr>
-
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-<td valign='top' style='font-size:12px;'>&nbsp;</td>
-
-</tr></td></tr>
-    </table>
-<table width='100%' cellspacing='0' cellpadding='2' border='0'>
-      <tr>
-        <td style='font-size:12px;width:50%;'><strong>ONE THOUSAND  ONE HUNDRED SIXTY THREE USD AND 44 CENTS</strong></td>
-        <td><table width='100%' cellspacing='0' cellpadding='2' border='0'>
-  <tr>
-<td align='right' style='font-size:12px;' >Subtotal</td>
-    <td  align='right' style='font-size:12px;'>$1,095.00<td>
-  </tr>
-  <tr>
-    <td  align='right' style='font-size:12px;'>TAX(6.25%)</td>
-    <td  align='right' style='font-size:12px;'>$68.44</td>
-  </tr>
-  <tr>
-
-    <td  align='right' style='font-size:12px;'><b>Total</b></td>
-    <td  align='right' style='font-size:12px;'><b>$1,163.44</b></td>
-  </tr></table>
-</td>
-      </tr>
-</table> 
-   
-   <table width='100%' height='50'><tr><td style='font-size:12px;text-align:justify;'></td></tr></table>
-    <table  width='100%' cellspacing='0' cellpadding='2'>
-      <tr>
-        <td width='33%' style='border-top:double medium #CCCCCC;font-size:12px;' valign='top' ><b>[Company name]</b><br/>
-
-
-</td>
-        <td width='33%' style='border-top:double medium #CCCCCC; font-size:12px;' align='center' valign='top'>
-[Company address line 1]<br />
-[Company address line 2] <br/>
-Phone: [Phone]<br/>
-</td>
-
-        <td valign='top' width='34%' style='border-top:double medium #CCCCCC;font-size:12px;' align='right'>[payment details]<br/> [payment details]  <br/> [payment details] <br/>    [payment details] <br/>
- </td>
-      </tr>
-    </table>
-</td>
-  </tr>
-</table>
+<body>
+  <div class="cs-container">
+    <div class="cs-invoice cs-style1">
+      <div class="cs-invoice_in" id="download_section">
+        <div class="cs-invoice_head cs-type1 cs-mb25">
+          <div class="cs-invoice_left">
+            <p class="cs-invoice_number cs-primary_color cs-mb5 cs-f16"><b class="cs-primary_color">Invoice No:</b> #SM75692</p>
+            <p class="cs-invoice_date cs-primary_color cs-m0"><b class="cs-primary_color">Date: </b>05.01.2022</p>
+          </div>
+          <div class="cs-invoice_right cs-text_right">
+            <div class="cs-logo cs-mb5"><img src="{{ asset('invoice/logo.svg') }}" alt="Logo"></div>
+          </div>
+        </div>
+        <div class="cs-invoice_head cs-mb10">
+          <div class="cs-invoice_left">
+            <b class="cs-primary_color">Invoice To:</b>
+            <p>
+              Jennifer Richards <br>
+              365 Bloor Street East, Toronto, <br>Ontario, M4W 3L4, <br>
+              Canada
+            </p>
+          </div>
+          <div class="cs-invoice_right cs-text_right">
+            <b class="cs-primary_color">Pay To:</b>
+            <p>
+              Biman Airlines <br>
+              237 Roanoke Road, North York, <br>
+              Ontario, Canada <br>
+              demo@email.com
+            </p>
+          </div>
+        </div>
+        <div class="cs-table cs-style1">
+          <div class="cs-round_border">
+            <div class="cs-table_responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th class="cs-width_3 cs-semi_bold cs-primary_color cs-focus_bg">Item</th>
+                    <th class="cs-width_4 cs-semi_bold cs-primary_color cs-focus_bg">Description</th>
+                    <th class="cs-width_2 cs-semi_bold cs-primary_color cs-focus_bg">Qty</th>
+                    <th class="cs-width_1 cs-semi_bold cs-primary_color cs-focus_bg">Price</th>
+                    <th class="cs-width_2 cs-semi_bold cs-primary_color cs-focus_bg cs-text_right">Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="cs-width_3">App Development</td>
+                    <td class="cs-width_4">Mobile & Ios Application Development</td>
+                    <td class="cs-width_2">2</td>
+                    <td class="cs-width_1">$460</td>
+                    <td class="cs-width_2 cs-text_right">$920</td>
+                  </tr>
+                  <tr>
+                    <td class="cs-width_3">Ui/UX Design</td>
+                    <td class="cs-width_4">Mobile & Ios Mobile App Design, Product Design</td>
+                    <td class="cs-width_2">1</td>
+                    <td class="cs-width_1">$220</td>
+                    <td class="cs-width_2 cs-text_right">$220</td>
+                  </tr>
+                  <tr>
+                    <td class="cs-width_3">Web Design</td>
+                    <td class="cs-width_4">Web Design & Development</td>
+                    <td class="cs-width_2">2</td>
+                    <td class="cs-width_1">$120</td>
+                    <td class="cs-width_2 cs-text_right">#240</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="cs-invoice_footer cs-border_top">
+              <div class="cs-left_footer cs-mobile_hide">
+                <p class="cs-mb0"><b class="cs-primary_color">Additional Information:</b></p>
+                <p class="cs-m0">At check in you may need to present the credit <br>card used for payment of this ticket.</p>
+              </div>
+              <div class="cs-right_footer">
+                <table>
+                  <tbody>
+                    <tr class="cs-border_left">
+                      <td class="cs-width_3 cs-semi_bold cs-primary_color cs-focus_bg">Subtoal</td>
+                      <td class="cs-width_3 cs-semi_bold cs-focus_bg cs-primary_color cs-text_right">$1140</td>
+                    </tr>
+                    <tr class="cs-border_left">
+                      <td class="cs-width_3 cs-semi_bold cs-primary_color cs-focus_bg">Tax</td>
+                      <td class="cs-width_3 cs-semi_bold cs-focus_bg cs-primary_color cs-text_right">-$20</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="cs-invoice_footer">
+            <div class="cs-left_footer cs-mobile_hide"></div>
+            <div class="cs-right_footer">
+              <table>
+                <tbody>
+                  <tr class="cs-border_none">
+                    <td class="cs-width_3 cs-border_top_0 cs-bold cs-f16 cs-primary_color">Total Amount</td>
+                    <td class="cs-width_3 cs-border_top_0 cs-bold cs-f16 cs-primary_color cs-text_right">$1160</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="cs-note">
+          <div class="cs-note_left">
+            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M416 221.25V416a48 48 0 01-48 48H144a48 48 0 01-48-48V96a48 48 0 0148-48h98.75a32 32 0 0122.62 9.37l141.26 141.26a32 32 0 019.37 22.62z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path d="M256 56v120a32 32 0 0032 32h120M176 288h160M176 368h160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+          </div>
+          <div class="cs-note_right">
+            <p class="cs-mb0"><b class="cs-primary_color cs-bold">Note:</b></p>
+            <p class="cs-m0">Here we can write a additional notes for the client to get a better understanding of this invoice.</p>
+          </div>
+        </div><!-- .cs-note -->
+      </div>
+      <div class="cs-invoice_btns cs-hide_print">
+        <a href="javascript:window.print()" class="cs-invoice_btn cs-color1">
+          <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M384 368h24a40.12 40.12 0 0040-40V168a40.12 40.12 0 00-40-40H104a40.12 40.12 0 00-40 40v160a40.12 40.12 0 0040 40h24" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><rect x="128" y="240" width="256" height="208" rx="24.32" ry="24.32" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path d="M384 128v-24a40.12 40.12 0 00-40-40H168a40.12 40.12 0 00-40 40v24" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><circle cx="392" cy="184" r="24"/></svg>
+          <span>Print</span>
+        </a>
+        <button id="download_btn" class="cs-invoice_btn cs-color2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Download</title><path d="M336 176h40a40 40 0 0140 40v208a40 40 0 01-40 40H136a40 40 0 01-40-40V216a40 40 0 0140-40h40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M176 272l80 80 80-80M256 48v288"/></svg>
+          <span>Download</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="{{ asset('invoice/jquery.min.js') }}"></script>
+  <script src="{{ asset('invoice/jspdf.min.js') }}"></script>
+  <script src="{{ asset('invoice/html2canvas.min.js') }}"></script>
+  <script src="{{ asset('invoice/main.js') }}"></script>
 </body>
 </html>
