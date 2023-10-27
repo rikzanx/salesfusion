@@ -41,7 +41,7 @@
             <th>Name</th>
             <th>Description</th>
             <th>Lokasi</th>
-            <th>Qty</th>
+            <th>Stock</th>
             <th>Aksi</th>
         </tr>
     </thead>
