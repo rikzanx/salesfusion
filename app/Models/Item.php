@@ -26,7 +26,7 @@ class Item extends Model
 
     public function inventory()
     {
-        return $this->hasOne('App\Models\Inventory','id','inventory_id')
+        return $this->hasOne('App\Models\Inventory','id','inventory_id');
     }
     
     public function getTotalAttribute()
