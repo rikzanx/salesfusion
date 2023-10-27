@@ -21,4 +21,7 @@ class Inventory extends Model
     public function transactions(){
         return $this->hasMany('App\Models\InventoryTransaction','inventory_id');
     }
+    public function images(){
+        return $this->hasMany('App\Models\ImagesInventory','inventory_id');
+    }
 }
