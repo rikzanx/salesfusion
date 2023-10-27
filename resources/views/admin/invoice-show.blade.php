@@ -38,13 +38,6 @@
     hr{
       border-top: 1px solid black !important;
     }
-    /* CSS untuk sel-sel tabel dengan teks yang harus tetap satu baris */
-    .table td, .table th {
-        white-space: nowrap !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important; /* Jika teks terlalu panjang, akan terpotong dan ditampilkan dengan elipsis (...) */
-    }
-
     </style>
 </head>
 <div class="container-fluid">
