@@ -149,15 +149,15 @@
     }
 
     #items > table th:nth-child(2), #items > table th:nth-child(4) {
-        width: 60px;
+        /* width: 80px; */
     }
 
     #items > table th:nth-child(3) {
-        width: 60px;
+        width: 45px;
     }
 
     #items > table th:nth-child(5) {
-        width: 80px;
+        /* width: 80px; */
     }
 
     #items > table tr td:not(:first-child) {
