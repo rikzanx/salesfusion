@@ -68,6 +68,7 @@ Route::group(['prefix' => 'admin'],function(){
     Route::resource('perusahaan',CompanyController::class);
     Route::resource('slider',ImagesSliderController::class);
     Route::resource('produk',ProductController::class);
+    Route::resource('imageproduk',ImagesProductController::class);
     Route::resource('invoice',InvoiceController::class);
     Route::resource('item',ItemController::class);
     Route::resource('password',PasswordController::class);

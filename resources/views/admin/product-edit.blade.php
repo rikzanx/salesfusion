@@ -75,11 +75,14 @@
 
                   <div class="form-group">
                     @foreach($product->images as $item)
-                    <div class="row">
-                      <div class="col-12">
-                      <a href="{{ asset($item->image_product) }}" data-toggle="lightbox" data-title="{{ $item->name }}">
+                    <div class="row mx-2">
+                      <div class="col-6">
+                          <a href="{{ asset($item->image_product) }}" data-toggle="lightbox" data-title="{{ $item->name }}">
                                 <img src="{{ asset($item->image_product) }}" style="width: 100px;height:100px;" alt="" srcset="">
-                            </a>
+                          </a>
+                      </div>
+                      <div class="col-6">
+                        <button class="btn btn-danger" onclick="modaldeleteimages({{ $item->id }})"><span class="fas fa-trash"></span></button>
                       </div>
                     </div>
                     @endforeach
@@ -122,10 +125,42 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+  <div class="modal fade" id="modal-default-image">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Peringatan</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Apakah anda yakin akan menghapus gambar ini&hellip;</p>
+        </div>
+        <form action="{{ route('imageproduk.destroy', ':id') }}" method="POST" class="delete-form-image">
+            @csrf
+            @method('DELETE')
+            <div class="modal-footer justify-content-between">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-danger">Delete</button>
+            </div>
+        </form>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
 @endsection
 
 @section('js')
 <script type="text/javascript">
+  function modaldeleteimage(id){
+        // alert(id);
+        var url = $('.delete-form-image').attr('action');
+        $('.delete-form-image').attr('action',url.replace(':id',id));
+        $('#modal-default-image').modal('show');
+    }
   $(document).ready(function() {
     $(".btn-add-image").click(function(){ 
         var lsthmtl = $(".clone").html();
