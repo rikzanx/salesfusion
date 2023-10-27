@@ -118,7 +118,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('kategori.index') }}" class="nav-link">
-              <i class="nav-icon fas fa-list"></i>
+              <i class="nav-icon fas fa-tags"></i>
               <p>
                 Kategori
               </p>
@@ -142,7 +142,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('invoice.index') }}" class="nav-link">
-              <i class="nav-icon fas fa-file-alt"></i>
+              <i class="nav-icon fas fa-file-invoice"></i>
               <p>
                 Invoice
               </p>
@@ -150,7 +150,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('surat-penawaran.index') }}" class="nav-link">
-              <i class="nav-icon fas fa-file-alt"></i>
+              <i class="nav-icon fas fa-file-signature"></i>
               <p>
                 Surat Penawaran
               </p>
