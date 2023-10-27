@@ -36,7 +36,7 @@
                 @csrf
                 <div class="card-body">
                   <div class="form-group">
-                    <label>Inventory <a href="{{ route('inventory.create') }}" class="btn btn-sm btn-primary">Tambah Inventory</a></label>
+                    <label>Inventory <a href="{{ route('inventories.create') }}" class="btn btn-sm btn-primary">Tambah Inventory</a></label>
                     <select class="form-control" name="inventory_id" id="inventorySelect">
                       @foreach ($inventories as $item)
                         <option value="{{ $item->id }}">{{$item->sku}} - {{ $item->name }}</option>

@@ -28,6 +28,7 @@
             <div class="card">
               <div class="card-header">
                 <a href="{{ route('inventorytransaction.create') }}" class="btn btn-success"><span class="fas fa-plus"></span> tambah produk</a>
+                <p>Sebelum tambah transaksi pastikan dulu data sku ada</p>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
