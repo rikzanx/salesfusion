@@ -37,7 +37,7 @@
                 @method('PATCH')
                 <div class="card-body">
                   <div class="form-group">
-                    <label>Inventory <a href="{{ route('inventories.create') }}" class="btn btn-sm btn-primary">Tambah Inventory</a></label>
+                    <label>Inventory <a href="{{ route('inventories.create') }}" class="">Tambah Inventory</a></label>
                     <select class="form-control" name="inventory_id" id="inventorySelect">
                       @foreach ($inventories as $item)
                         <option value="{{ $item->id }}" {{ ($item->id == $inventory_transaction->inventory_id)?'selected':'' }}  >{{$item->sku}} - {{ $item->name }}</option>
