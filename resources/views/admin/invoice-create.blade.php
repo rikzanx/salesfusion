@@ -82,7 +82,7 @@
                         </div>
                     </div>    
                   </div>
-                  <div class="clone hide">
+                  <div class="clone hide" style="display:none;">
                     <div class="hdtuto control-group lst input-group" style="margin-top:10px">
                       <div class="row">
                           <div class="col-12 col-sm-4">
