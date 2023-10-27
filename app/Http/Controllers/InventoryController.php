@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Inventory;
+use App\Models\ImagesInventory;
 use Validator;
 use Illuminate\Support\Facades\DB;
 
@@ -47,7 +48,20 @@ class InventoryController extends Controller
             $inventory->description = $request->description;
             $inventory->lokasi = $request->lokasi;
             $inventory->save();
-
+            if($request->hasfile('filenames')){
+                foreach($request->file('filenames') as $file)
+                {
+                    $imageinventory = new ImagesInventory();
+                    $uploadFolder = "img/inventory/".$request->sku."/";
+                    $image = $file;
+                    $imageName = time().'-'.$image->getClientOriginalName();
+                    $image->move(public_path($uploadFolder), $imageName);
+                    $image_link = $uploadFolder.$imageName;
+                    $imageinventory->inventory_id = $id;
+                    $imageinventory->image_inventory = $image_link;
+                    $imageinventory->save();
+                }
+            }
             DB::commit();
 
             return redirect()->route("inventories.index")->with('status', "Inventory item created successfully");
@@ -86,7 +100,20 @@ class InventoryController extends Controller
             $inventory->lokasi = $request->lokasi;
             
             $inventory->save();
-
+            if($request->hasfile('filenames')){
+                foreach($request->file('filenames') as $file)
+                {
+                    $imageinventory = new ImagesInventory();
+                    $uploadFolder = "img/inventory/".$request->sku."/";
+                    $image = $file;
+                    $imageName = time().'-'.$image->getClientOriginalName();
+                    $image->move(public_path($uploadFolder), $imageName);
+                    $image_link = $uploadFolder.$imageName;
+                    $imageinventory->inventory_id = $id;
+                    $imageinventory->image_inventory = $image_link;
+                    $imageinventory->save();
+                }
+            }
             DB::commit();
 
             return redirect()->route("inventories.index")->with('status', "Inventory item updated successfully");
