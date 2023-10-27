@@ -41,20 +41,16 @@
             <input type="text" name="sku" class="form-control" id="exampleInputEmail1" value="{{ $inventory->sku }}" readonly>
         </div>
         <div class="form-group">
-            <label for="exampleInputEmail1">Name</label>
-            <input type="text" value="{{ $inventory->name }}" name="name" class="form-control" id="exampleInputEmail1" placeholder="Enter the name">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputEmail1">Description</label>
-            <input type="text" value="{{ $inventory->description }}" name="description" class="form-control" id="exampleInputEmail1" placeholder="Enter the description">
-        </div>
-        <div class="form-group">
-            <label>Deskripsi</label>
-            <textarea id="description" name="description" class="form-control" rows="5" placeholder="Enter ...">{{ $inventory->description }}"</textarea>
+            <label>Nama Barang</label>
+            <textarea id="name" name="name" class="form-control" rows="5" placeholder="Enter ...">{{ $inventory->name }}</textarea>
         </div>
         <div class="form-group">
             <label for="exampleInputEmail1">Lokasi</label>
             <input type="text" value="{{ $inventory->lokasi }}" name="lokasi" class="form-control" id="exampleInputEmail1" placeholder="Enter the location">
+        </div>
+        <div class="form-group">
+            <label>Catatan</label>
+            <textarea id="description" name="description" class="form-control" rows="5" placeholder="Enter ...">{{ $inventory->description }}</textarea>
         </div>
         <div class="form-group">
             @foreach($inventory->images as $item)

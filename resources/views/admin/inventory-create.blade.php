@@ -40,16 +40,16 @@
                                         <input type="text" name="sku" class="form-control" id="exampleInputEmail1" value="{{ str_pad($nextId, 8, '0', STR_PAD_LEFT) }}" readonly>
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Name</label>
-                                        <input type="text" name="name" class="form-control" id="exampleInputEmail1" placeholder="Enter the name">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Deskripsi</label>
-                                        <textarea id="description" name="description" class="form-control" rows="5" placeholder="Enter ..."></textarea>
+                                        <label>Nama Barang</label>
+                                        <textarea id="name" name="name" class="form-control" rows="5" placeholder="Enter ..."></textarea>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Lokasi</label>
-                                        <input type="text" name="lokasi" class="form-control" id="exampleInputEmail1" placeholder="Enter the location">
+                                        <input type="text" value="" name="lokasi" class="form-control" id="exampleInputEmail1" placeholder="Enter the location">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Catatan</label>
+                                        <textarea id="description" name="description" class="form-control" rows="5" placeholder="Enter ..."></textarea>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputFile">Foto Barang</label>
