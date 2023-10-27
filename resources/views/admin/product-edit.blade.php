@@ -82,7 +82,7 @@
                           </a>
                       </div>
                       <div class="col-6">
-                        <button class="btn btn-danger" onclick="modaldeleteimages({{ $item->id }})"><span class="fas fa-trash"></span></button>
+                        <button class="btn btn-danger" onclick="modaldeleteimage({{ $item->id }})"><span class="fas fa-trash"></span></button>
                       </div>
                     </div>
                     @endforeach
