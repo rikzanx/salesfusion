@@ -58,7 +58,7 @@
 			</tr>
             @foreach($invoice->items as $item)
             <tr>
-				<td>{{ $item->inventory->name }}</td>
+                <td>{!! nl2br($item->inventory->name) !!}</td>
 				<td>@rupiah($item->item_price)</td>
 				<td>{{ $item->qty }}</td>
 				<td>@rupiah($item->total)</td>
