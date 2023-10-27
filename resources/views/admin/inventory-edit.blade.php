@@ -130,6 +130,16 @@
     <!-- /.modal-dialog -->
   </div>
   <!-- /.modal -->
+  <!-- hidden content -->
+  <div class="clone hide" style="display:none;">
+        <div class="hdtuto control-group lst input-group" style="margin-top:10px">
+        <input type="file" name="filenames[]" class="myfrm form-control">
+        <div class="input-group-btn"> 
+            <button class="btn btn-danger" type="button"><i class="fldemo glyphicon glyphicon-remove"></i> Remove</button>
+        </div>
+        </div>
+    </div>
+    <!-- end hidden content -->
 @endsection
 
 @section('js')

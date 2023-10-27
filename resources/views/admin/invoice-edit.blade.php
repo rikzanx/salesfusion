@@ -149,6 +149,30 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+  <div class="clone hide" style="display:none;">
+    <div class="hdtuto control-group lst input-group" style="margin-top:10px">
+      <div class="row">
+          <div class="col-12 col-sm-4">
+            <input type="text" name="description[]" placeholder="Nama Barang" class="myfrm form-control">
+          </div>
+          <div class="col-12 col-sm-4">
+            <input type="number" name="item_price[]" placeholder="Harga Barang" min="1000" class="myfrm form-control">
+          </div>
+          <div class="col-12 col-sm-4">
+            <div class="row">
+              <div class="col-6">
+                <input type="number" name="qty[]" placeholder="Jumlah" class="myfrm form-control">
+              </div>
+              <div class="col-6">
+                <div class="input-group-btn"> 
+                <button class="btn btn-danger" type="button"><i class="fldemo glyphicon glyphicon-remove"></i> Remove</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>  
+    </div>
+  </div>
 @endsection
 
 @section('js')
