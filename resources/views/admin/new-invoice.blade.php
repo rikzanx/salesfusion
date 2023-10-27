@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Simple invoice html template</title>
+	<title>Invoice {{$invoice->no_invoice}} {{ config('app.company.name', "SalesFusion") }}</title>
 </head>
 <body>
 
@@ -29,8 +29,8 @@
 				<strong>{{ config('app.company.name', 'SalesFusion') }}</strong><br>
 				{{ config('app.company.address', "123 Main Street, Anytown, USA") }} <br>
 				Phone : {{ config('app.company.telp', "+6285101440330") }} <br><br>
-				Email: contact@website.com <br>
-				Web: www.website.com
+				Email: {{ config('app.company.email', "info@salesfusion.com") }}<br>
+				Web: {{ url('/') }}
 			</p>
 		</div>
 		<div id="to">
@@ -44,136 +44,35 @@
 
 	<div id="items">
 		<table>
-            <?php $subtotal = 0; ?>
-            @foreach($invoice->items as $item)
-            <!-- <tr>
-                <td>{{ $item->inventory->name }}</td>
-                <td class="text-center">@rupiah($item->item_price)</td>
-                <td class="text-center">{{ $item->qty }}</td>
-                <td class="text-right">@rupiah($item->total)</td>
-            </tr> -->
-            <?php $subtotal += $item->item_price * $item->qty; ?>
-            @endforeach
+            <?php 
+            $subtotal = 0;
+            $total_row = count($invoice->items);
+            $total_row_kosong = ((19-$total_row) <= 0)? 0: (19-$total_row);
+            ?>
+            
 			<tr>
 				<th>Nama Barang</th>
 				<th>Harga</th>
 				<th>Jumlah</th>
 				<th>Total</th>
 			</tr>
-			<tr>
-				<td>Article</td>
-				<td>20%</td>
-				<td>3,99</td>
-				<td>1</td>
+            @foreach($invoice->items as $item)
+            <tr>
+				<td>{{ $item->inventory->name }}</td>
+				<td>@rupiah($item->item_price)</td>
+				<td>{{ $item->qty }}</td>
+				<td>@rupiah($item->total)</td>
 			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
+            <?php $subtotal += $item->item_price * $item->qty; ?>
+            @endforeach
+            @for($i=$total_row_kosong;$i<=0;$i++)
+            <tr>
 				<td></td>
 				<td></td>
 				<td></td>
 				<td></td>
 			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
+            @endfor
 		</table>
 	</div>
 
