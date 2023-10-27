@@ -50,7 +50,7 @@
                         <td>{{ $item->inventory->name }}</td>
                         <td>{{ $item->type }}</td>
                         <td>{{ $item->quantity }}</td>
-                        <td>{{ $item->catatan }}</td>
+                        <td>{{ $item->notes }}</td>
                         <td>
                             <a class="btn btn-primary" href="{{ route('inventorytransaction.edit',$item->id) }}"><span class="fas fa-edit"></span></a>
                             <button class="btn btn-danger" onclick="modaldelete({{ $item->id }})"><span class="fas fa-trash"></span></button>
