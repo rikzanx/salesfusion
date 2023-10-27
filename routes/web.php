@@ -18,6 +18,7 @@ use App\Http\Controllers\SuratPenawaranController;
 use App\Http\Controllers\KeuanganController;
 use App\Http\Controllers\InventoryController;
 use App\Http\Controllers\InventoryTransactionController;
+use App\Http\Controllers\ImagesInventoryController;
 
 use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\Tags\Url;
@@ -77,6 +78,7 @@ Route::group(['prefix' => 'admin'],function(){
     Route::resource('keuangan',KeuanganController::class);
     Route::resource('inventories',InventoryController::class);
     Route::resource('inventorytransaction',InventoryTransactionController::class);
+    Route::resource('imageinventory',ImagesInventoryController::class);
 
     Route::get('proforma/invoice/{id}',[InvoiceController::class, 'show_proform'])->name("show_proform");
     Route::get('suratjalan/invoice/{id}',[InvoiceController::class, 'surat_jalan'])->name("surat_jalan");
