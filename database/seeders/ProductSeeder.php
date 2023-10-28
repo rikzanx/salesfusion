@@ -50,7 +50,7 @@ class ProductSeeder extends Seeder
             ]);
 
             $inventory_transaction = $faker->numberBetween(1,10);
-            $inventory_sisa = $inventory_transaction
+            $inventory_sisa = $inventory_transaction;
             for($xy=1;$xy <= $inventory_transaction; $xy++){
                 if($inventory_transaction == 1){
                     \App\Models\InventoryTransaction::create([
