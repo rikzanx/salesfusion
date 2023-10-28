@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Faker\Factory as FakerFactory;
 
 class ProductSeeder extends Seeder
 {
@@ -13,83 +14,86 @@ class ProductSeeder extends Seeder
      */
     public function run()
     {
-        // Seeder untuk Kategori Produk
-        \App\Models\Category::create([
-            'name' => "Category 1",
-            'image_category' => "img/img-category.svg",
-        ]);
+        $faker = FakerFactory::create('id_ID');
 
-        \App\Models\Category::create([
-            'name' => "Category 2",
-            'image_category' => "img/img-category.svg",
-        ]);
+        // Sesuaikan dengan jumlah kategori produk yang ingin Anda buat
+        $numberOfCategories = 10;
 
-        \App\Models\Category::create([
-            'name' => "Category 3",
-            'image_category' => "img/img-category.svg",
-        ]);
+        for ($i = 0; $i < $numberOfCategories; $i++) {
+            \App\Models\CategoryProduct::create([
+                'name' => $faker->word, // Nama kategori produk
+                'image_category' => "img/img-category.svg",
+            ]);
+        }
 
-        // Seeder untuk Produk
-        \App\Models\Product::create([
-            'category_id' => 1,
-            'name' => "Product 1",
-            'brand' => "Brand A",
-            'description' => "This is Product 1 from Category 1.",
-        ]);
+        $numberOfProducts = 50;
 
-        \App\Models\Product::create([
-            'category_id' => 1,
-            'name' => "Product 2",
-            'brand' => "Brand B",
-            'description' => "This is Product 2 from Category 1.",
-        ]);
+        for ($i = 0; $i < $numberOfProducts; $i++) { // Nama produk
+            $name_product = $faker->word;
+            $brand = $faker->company;
+            $description = $faker->text;
+            \App\Models\Product::create([
+                'category_id' => mt_rand(1, 10),
+                'name' => $name_product,
+                'brand' => $brand,
+                'description' => $description,
+            ]);
 
-        \App\Models\Product::create([
-            'category_id' => 2,
-            'name' => "Product 3",
-            'brand' => "Brand X",
-            'description' => "This is Product 3 from Category 2.",
-        ]);
+            $id_product = $i +1;
+            $stock = $faker->numberBetween(1, 100);
+            \App\Models\Inventory::create([
+                'sku' => str_pad($id_product, 8, '0', STR_PAD_LEFT),
+                'name' => $name_product, // Nama inventaris
+                'description' => $faker->text, // Deskripsi inventaris
+                'lokasi' => $faker->city, // Lokasi inventaris
+                'qty' => $stock,
+            ]);
 
-        \App\Models\Product::create([
-            'category_id' => 3,
-            'name' => "Product 4",
-            'brand' => "Brand Z",
-            'description' => "This is Product 4 from Category 3.",
-        ]);
+            $inventory_transaction = $faker->numberBetween(1,10);
+            $inventory_sisa = $inventory_transaction
+            for($xy=1;$xy <= $inventory_transaction; $xy++){
+                if($inventory_transaction == 1){
+                    \App\Models\InventoryTransaction::create([
+                        "inventory_id"=> $id_product,
+                        "type" => "masuk",
+                        "quantity" =>$inventory_sisa,
+                        "notes" => $faker->sentence,
+                    ]);
+                }else{
+                    $enumOptions = ["masuk", "keluar"];
+                    $randomValue = $enumOptions[array_rand($enumOptions)];
+                    if($xy == $inventory_transaction){
+                        \App\Models\InventoryTransaction::create([
+                            "inventory_id"=> $id_product,
+                            "type" => "masuk",
+                            "quantity" =>$inventory_sisa,
+                            "notes" => $faker->sentence,
+                        ]);
+                    }else{
+                        $quantity = $faker->numberBetween(1, $inventory_sisa);
+                        \App\Models\InventoryTransaction::create([
+                            "inventory_id"=> $id_product,
+                            "type" => $randomValue,
+                            "quantity" =>$quantity,
+                            "notes" => $faker->sentence,
+                        ]);
+                        if($randomValue == "masuk"){
+                            $inventory_sisa -= $quantity;
+                        }else{
+                            $inventory_sisa -= $quantity;
+                        }
+                    }
+                }
+            }
 
-        // seeder untuk foto produk
-        \App\Models\ImagesProduct::create([
-            'product_id' => 1,
-            'image_product' => "img/img-product-new.jpeg",
-        ]);
-        \App\Models\ImagesProduct::create([
-            'product_id' => 1,
-            'image_product' => "img/img-product-new.jpeg",
-        ]);
-        \App\Models\ImagesProduct::create([
-            'product_id' => 1,
-            'image_product' => "img/img-product-new.jpeg",
-        ]);
-        \App\Models\ImagesProduct::create([
-            'product_id' => 1,
-            'image_product' => "img/img-product-new.jpeg",
-        ]);
-        \App\Models\ImagesProduct::create([
-            'product_id' => 2,
-            'image_product' => "img/img-product-new.jpeg",
-        ]);
-        \App\Models\ImagesProduct::create([
-            'product_id' => 2,
-            'image_product' => "img/img-product-new.jpeg",
-        ]);
-        \App\Models\ImagesProduct::create([
-            'product_id' => 3,
-            'image_product' => "img/img-product-new.jpeg",
-        ]);
-        \App\Models\ImagesProduct::create([
-            'product_id' => 4,
-            'image_product' => "img/img-product-new.jpeg",
-        ]);
+            $numberOfImagesProduct = 5;
+            for($z=0;$z < $numberOfImagesProduct;$z ++){
+                // seeder untuk foto produk
+                \App\Models\ImagesProduct::create([
+                    'product_id' => 1,
+                    'image_product' => "img/img-product-new.jpeg",
+                ]);
+            }
+        }
     }
 }
