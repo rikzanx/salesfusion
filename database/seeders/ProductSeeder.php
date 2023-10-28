@@ -90,8 +90,12 @@ class ProductSeeder extends Seeder
             for($z=0;$z < $numberOfImagesProduct;$z ++){
                 // seeder untuk foto produk
                 \App\Models\ImagesProduct::create([
-                    'product_id' => 1,
+                    'product_id' => $id_product,
                     'image_product' => "img/img-product-new.jpeg",
+                ]);
+                \App\Models\ImagesInventory::create([
+                    "inventory_id" => $id_product,
+                    "image_inventory" => => "img/img-product-new.jpeg",
                 ]);
             }
         }
