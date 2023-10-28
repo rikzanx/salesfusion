@@ -22,7 +22,7 @@ class CustomerSeeder extends Seeder
 
         for ($i = 0; $i < $numberOfCustomers; $i++) {
             \App\Models\Customer::create([
-                'name_customer' => $faker->company;
+                'name_customer' => $faker->company,
                 'address_customer' => $faker->address,
                 'phone_customer' => $faker->phoneNumber,
             ]);
