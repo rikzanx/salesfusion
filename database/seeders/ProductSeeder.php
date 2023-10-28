@@ -80,7 +80,7 @@ class ProductSeeder extends Seeder
                         if($randomValue == "masuk"){
                             $inventory_sisa -= $quantity;
                         }else{
-                            $inventory_sisa -= $quantity;
+                            $inventory_sisa += $quantity;
                         }
                     }
                 }
