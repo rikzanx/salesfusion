@@ -32,7 +32,7 @@ class ProductSeeder extends Seeder
 
         if ($apiResponse->successful()) {
             $products = $apiResponse->json()['products'];
-            foreach($product as $i=>$product){
+            foreach($products as $i=>$product){
                 \App\Models\Product::create([
                     'category_id' => mt_rand(1, 10),
                     'name' => $product['title'],
