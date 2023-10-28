@@ -20,7 +20,7 @@ class ProductSeeder extends Seeder
         $numberOfCategories = 10;
 
         for ($i = 0; $i < $numberOfCategories; $i++) {
-            \App\Models\CategoryProduct::create([
+            \App\Models\Category::create([
                 'name' => $faker->word, // Nama kategori produk
                 'image_category' => "img/img-category.svg",
             ]);
