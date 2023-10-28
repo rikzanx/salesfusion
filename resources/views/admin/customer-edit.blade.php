@@ -32,7 +32,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form method="POST" action="{{ route('kategori.update',$category->id) }}" enctype="multipart/form-data">
+              <form method="POST" action="{{ route('customer.update',$category->id) }}" enctype="multipart/form-data">
                 @csrf
                 {{ method_field('PATCH') }}
                 <div class="card-body">

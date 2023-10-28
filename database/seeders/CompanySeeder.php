@@ -16,8 +16,8 @@ class CompanySeeder extends Seeder
         \App\Models\Company::create([
             'name' => "SalesFusion",
             'about' => "SalesFusion is a comprehensive application that combines sales management, inventory management, as well as ERP and CRM solutions to help companies efficiently manage their operations.",
-            'address' => "123 Main Street, Anytown, USA",
-            'telp' => "+1234567890",
+            'address' => "Jln. Setiabudhi No. 918, Bekasi 84730, Pabar",
+            'telp' => "+6288879603342",
             'email' => "info@salesfusion.com",
             'image_company' => "img/img-company-new.png",
             'lat' => "40.7128",
@@ -29,8 +29,8 @@ class CompanySeeder extends Seeder
         config(['app.company' => Array(
             'name' => "SalesFusion",
             'about' => "SalesFusion is a comprehensive application that combines sales management, inventory management, as well as ERP and CRM solutions to help companies efficiently manage their operations.",
-            'address' => "123 Main Street, Anytown, USA",
-            'telp' => "+1234567890",
+            'address' => "Jln. Setiabudhi No. 918, Bekasi 84730, Pabar",
+            'telp' => "+6288879603342",
             'email' => "info@salesfusion.com",
             'image_company' => "img/img-company-new.png",
             'lat' => "40.7128",
