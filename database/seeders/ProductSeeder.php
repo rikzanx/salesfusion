@@ -73,7 +73,7 @@ class ProductSeeder extends Seeder
                             "notes" => $faker->sentence,
                         ]);
                     }else{
-                        $quantity = $faker->numberBetween(1, $inventory_sisa);
+                        $quantity = $faker->numberBetween(1, ($stock/$inventory_transaction));
                         \App\Models\InventoryTransaction::create([
                             "inventory_id"=> $id_product,
                             "type" => $randomValue,
