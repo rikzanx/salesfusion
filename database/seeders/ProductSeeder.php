@@ -95,7 +95,7 @@ class ProductSeeder extends Seeder
                 ]);
                 \App\Models\ImagesInventory::create([
                     "inventory_id" => $id_product,
-                    "image_inventory" => => "img/img-product-new.jpeg",
+                    "image_inventory" => "img/img-product-new.jpeg",
                 ]);
             }
         }
