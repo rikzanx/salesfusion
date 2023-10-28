@@ -62,6 +62,9 @@ class ProductSeeder extends Seeder
                 }else{
                     $enumOptions = ["masuk", "keluar"];
                     $randomValue = $enumOptions[array_rand($enumOptions)];
+                    if($xy == 1){
+                        $randomValue = "masuk";
+                    }
                     if($xy == $inventory_transaction){
                         \App\Models\InventoryTransaction::create([
                             "inventory_id"=> $id_product,
