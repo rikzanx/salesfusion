@@ -159,11 +159,11 @@
 
 @section('js')
 <script type="text/javascript">
+  function initializeSelect2(selectElementObj) {
+    selectElementObj.select2();
+  }
   $(document).ready(function() {
     //function to initialize select2
-    function initializeSelect2(selectElementObj) {
-      selectElementObj.select2();
-    }
 
     //onload: call the above function 
     $(".inventorySelect").each(function() {
