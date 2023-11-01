@@ -63,7 +63,7 @@
                   <div class="input-group hdtuto control-group lst increment" >
                     <div class="row">
                         <div class="col-12 col-sm-4">
-                          <select class="form-control" name="inventory_id[]" class="inventorySelect">
+                          <select class="form-control inventorySelect" name="inventory_id[]" >
                             @foreach ($inventories as $item)
                             <option value="{{ $item->id }}">{{ $item->sku }} - {{ $item->name }}</option>
                             @endforeach
@@ -130,7 +130,7 @@
     <div class="hdtuto control-group lst input-group" style="margin-top:10px">
       <div class="row">
           <div class="col-12 col-sm-4">
-            <select class="form-control" name="inventory_id[]" class="inventorySelect">
+            <select class="form-control inventorySelect" name="inventory_id[]" class="inventorySelect">
               @foreach ($inventories as $item)
                 <option value="{{ $item->id }}">{{ $item->sku }} - {{ $item->name }}</option>
               @endforeach
