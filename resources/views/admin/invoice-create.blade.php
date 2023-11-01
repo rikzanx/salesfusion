@@ -130,7 +130,7 @@
     <div class="hdtuto control-group lst input-group" style="margin-top:10px">
       <div class="row">
           <div class="col-12 col-sm-4">
-            <select class="form-control inventorySelect" name="inventory_id[]" class="inventorySelect">
+            <select class="form-control inventorySelect" name="inventory_id[]">
               @foreach ($inventories as $item)
                 <option value="{{ $item->id }}">{{ $item->sku }} - {{ $item->name }}</option>
               @endforeach
@@ -175,11 +175,11 @@
         $(".increment").after(lsthmtl);
 
         // Membuat elemen jQuery dari konten HTML yang telah diambil
-        var $clonedElements = $(".clone>select").html();
+        var $clonedElements = $(".clone>select");
 
         // Mengambil elemen-elemen select dari elemen yang telah di-clone
         var $selectElements = $clonedElements.find('select');
-        initializeSelect2($(".clone>select"));
+        initializeSelect2($selectElements);
     });
     $("body").on("click",".btn-danger",function(){ 
         $(this).closest(".hdtuto").remove();
