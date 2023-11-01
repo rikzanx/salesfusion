@@ -175,7 +175,7 @@
         $(".increment").after(lsthmtl);
 
         // Membuat elemen jQuery dari konten HTML yang telah diambil
-        var $clonedElements = $(lsthtml);
+        var $clonedElements = $(".clone").html();
 
         // Mengambil elemen-elemen select dari elemen yang telah di-clone
         var $selectElements = $clonedElements.find('select');
