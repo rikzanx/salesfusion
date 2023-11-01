@@ -175,11 +175,11 @@
         $(".increment").after(lsthmtl);
 
         // Membuat elemen jQuery dari konten HTML yang telah diambil
-        var $clonedElements = $(".clone").html();
+        var $clonedElements = $(".clone>select").html();
 
         // Mengambil elemen-elemen select dari elemen yang telah di-clone
         var $selectElements = $clonedElements.find('select');
-        initializeSelect2(selectElements);
+        initializeSelect2($(".clone>select"));
     });
     $("body").on("click",".btn-danger",function(){ 
         $(this).closest(".hdtuto").remove();
