@@ -173,13 +173,8 @@
     $(".btn-add-image").click(function(){ 
         var lsthmtl = $(".clone").html();
         $(".increment").after(lsthmtl);
-
-        // Membuat elemen jQuery dari konten HTML yang telah diambil
-        var $clonedElements = $(".clone>select");
-
-        // Mengambil elemen-elemen select dari elemen yang telah di-clone
-        var $selectElements = $clonedElements.find('select');
-        initializeSelect2($selectElements);
+        $(".increment>.inventorySelect:last").select2();
+        
     });
     $("body").on("click",".btn-danger",function(){ 
         $(this).closest(".hdtuto").remove();
