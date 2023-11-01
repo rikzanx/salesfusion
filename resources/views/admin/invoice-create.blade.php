@@ -160,40 +160,33 @@
 @section('js')
 <script type="text/javascript">
   $(document).ready(function() {
+    //function to initialize select2
+    function initializeSelect2(selectElementObj) {
+      selectElementObj.select2();
+    }
+
+    //onload: call the above function 
+    $(".inventorySelect").each(function() {
+      initializeSelect2($(this));
+    });
+
     $(".btn-add-image").click(function(){ 
-        // var lsthmtl = `
-        // <div class="hdtuto control-group lst input-group" style="margin-top:10px">
-        //   <div class="row">
-        //       <div class="col-12 col-sm-4">
-        //         <input type="text" name="description[]" placeholder="Nama Barang" class="myfrm form-control">
-        //       </div>
-        //       <div class="col-12 col-sm-4">
-        //         <input type="number" name="item_price[]" placeholder="Harga Barang" min="1000" class="myfrm form-control">
-        //       </div>
-        //       <div class="col-12 col-sm-4">
-        //         <div class="row">
-        //           <div class="col-6">
-        //             <input type="number" name="qty[]" placeholder="Jumlah" class="myfrm form-control">
-        //           </div>
-        //           <div class="col-6">
-        //             <div class="input-group-btn"> 
-        //             <button class="btn btn-danger" type="button"><i class="fldemo glyphicon glyphicon-remove"></i> Remove</button>
-        //             </div>
-        //           </div>
-        //         </div>
-        //       </div>
-        //   </div>  
-        // </div>
-        // `;
         var lsthmtl = $(".clone").html();
         $(".increment").after(lsthmtl);
+
+        // Membuat elemen jQuery dari konten HTML yang telah diambil
+        var $clonedElements = $(lsthtml);
+
+        // Mengambil elemen-elemen select dari elemen yang telah di-clone
+        var $selectElements = $clonedElements.find('select');
+        initializeSelect2(selectElements);
     });
     $("body").on("click",".btn-danger",function(){ 
         $(this).closest(".hdtuto").remove();
     });
 
     $('#customerSelect').select2(); // Anda perlu memasang plugin Select2 untuk ini
-    $('.inventorySelect').select2(); // Anda perlu memasang plugin Select2 untuk ini
+  // Anda perlu memasang plugin Select2 untuk ini
   });
 </script>
 @endsection
